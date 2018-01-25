@@ -49,7 +49,7 @@ li a {
   padding-bottom: 5px;
   border-top: 2px inset #fff;
   background-color: #000;
-  padding-top: 10;
+  padding-top: 10px;
 }
 
 li a:hover {
@@ -68,11 +68,39 @@ footer {
 footer a {
   display: inline-block;
   color: #CEFF00;
-    text-decoration: none;
-    padding: 10px;
+  text-decoration: none;
+  padding: 10px;
 }
 
 footer a:hover {
   background-color: #CEFF00;
   color: #000;
+}
+
+img {
+  margin: auto;
+  padding-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+section p {
+  text-transform: none;
+  text-align: justify;
+  padding: 20px;
+}
+
+section p a {
+  color: #CEFF00;
+}
+
+section p a:hover {
+  text-decoration: underline;
+}
+
+p {
+  padding-top: 20 px;
 }
