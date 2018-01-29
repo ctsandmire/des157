@@ -4,6 +4,8 @@ var i = 0;
 var j = 0;
 var k = 0;
 
+processForm();
+
 document.f.onsubmit = processForm;
 
 function processForm() {
