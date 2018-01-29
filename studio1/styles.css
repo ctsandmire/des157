@@ -177,12 +177,12 @@ p {
      text-align: center;
    }
 
-   #social ul li {
+   #valid ul li {
      float: right;
      padding-right: 10px;
    }
 
-   #social ul li a {
+   #valid ul li a {
      text-decoration: none;
      font-size: 32px;
      color: white;
