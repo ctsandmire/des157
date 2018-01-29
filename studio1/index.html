@@ -1,50 +1,73 @@
 <!doctype html>
+<html>
 
 <head>
   <meta charset="utf-8" />
   <title>Vaguely Inspirational Company Summary Generator</title>
-  <link href="styles.css" rel="stylesheet" />
+  <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Domine|Montserrat" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="fontawesome-all.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
+
 </head>
 
 <body>
-  <header>
+
+  <section>
     <h1>Vaguely Inspirational Company Summary Generator</h1>
-  </header>
-  <form name="f">
-    <div>
-      <label for="companyname">Company Name</label>
-      <input type="text" name="companyname" value="Intelligentrify">
-    </div>
+    <div id="form">
 
-    <div>
-      <label for="year">Year of Establishment</label>
-      <input type="text" name="year" value="2006">
-    </div>
+      <form name="f">
+        <div>
+          <label for="companyname">Company Name</label>
+          <input type="text" name="companyname" value="Intelligentrify">
+        </div>
 
-    <div>
-      <label for="numemployees">Number of employees</label>
-      <input type="text" name="numemployees" value="241">
-    </div>
+        <div>
+          <label for="year">Year of Establishment</label>
+          <input type="text" name="year" value="2006">
+        </div>
 
-    <div>
-      <label for="industry">Industry</label>
-      <input type="text" name="industry" value="marketing">
-    </div>
+        <div>
+          <label for="numemployees">Number of employees</label>
+          <input type="text" name="numemployees" value="241">
+        </div>
 
-    <div>
-      <label for="jobsite">url for job openings</label>
-      <input type="text" name="jobsite" value="sample.com">
-    </div>
+        <div>
+          <label for="industry">Industry</label>
+          <input type="text" name="industry" value="marketing">
+        </div>
 
-    <div>
-      <input type="submit" value="submit">
+        <div>
+          <input type="reset" value="reset">
+          <input type="submit" name="generate" value="generate!">
+          <input type="submit" name="randomize" value="randomize!">
+        </div>
+      </form>
     </div>
-  </form>
-
-  <section id="results">
-    <p id="myMsg"></p>
   </section>
 
 
+
+  <section id="results">
+    <img src="images/quotes-01.svg" alt="open quotes" />
+    <p id="myMsg"></p>
+    <img src="images/quotes-02.svg" alt="open quotes" />
+  </section>
+
+
+  <footer>
+    <nav id="social">
+      <ul>
+        <li><a href="https://validator.w3.org/check?uri=referer"><i class="fab fa-html5" aria-hidden="true" width="15"></i></a></li>
+        <li><a href="https://jigsaw.w3.org/css-validator/check/referer"><i class="fa fa-css3" aria-hidden="true" width="15"></i></a></li>
+      </ul>
+    </nav>
+  </footer>
+
   <script src="script.js"></script>
+
 </body>
+
+</html>
