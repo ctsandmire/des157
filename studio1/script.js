@@ -10,6 +10,7 @@ processForm();
 document.f.onsubmit = processForm;
 
 
+
 function processForm() {
 
   //3 j
@@ -27,33 +28,34 @@ function processForm() {
   var adj2 = ["next-generation", "crowdsourced", "brick and mortar", "on-brand", "seamless", "scalable"]
 
 
-  var companyname=document.f.companyname.value;
-  var year=document.f.year.value;
-  var numemployees=document.f.numemployees.value;
-  var industry=document.f.industry.value;
+  var companyname = document.f.companyname.value;
+  var year = document.f.year.value;
+  var numemployees = document.f.numemployees.value;
+  var industry = document.f.industry.value;
 
 
 
   var myMsg = document.getElementById("myMsg");
-  myMsg.innerHTML = ("At <em>" + companyname + "</em>, we believe in " + adj1[k] +" " + noun1[i] + ". " + adverb1[i] + " " + ingverb1[l] + " since <em>" + year + "</em>, we have grown to a family of <em>" + numemployees + "</em> " + noun2[j] + " who are on a mission to " + verb1[i] + " the <em>" + industry + "</em> industry by " + verb2[i] + " " + adj2[k] + " " + noun3[i] + ".");
+  myMsg.innerHTML = ("At <em>" + companyname + "</em>, we believe in " + adj1[k] + " " + noun1[i] + ". " + adverb1[i] + " " + ingverb1[l] + " since <em>" + year + "</em>, we have grown to a family of <em>" + numemployees + "</em> " + noun2[j] + " who are on a mission to " + verb1[i] + " the <em>" + industry + "</em> industry by " + verb2[i] + " " + adj2[k] + " " + noun3[i] + ".");
   i++;
   j++;
   k++;
   l++;
 
 
-  if (j>2) {
-    j=0;
+  if (j > 2) {
+    j = 0;
   }
-  if (i>3) {
-    i=0;
+  if (i > 3) {
+    i = 0;
   }
-  if (l>4) {
-    l=0;
+  if (l > 4) {
+    l = 0;
   }
-  if (k>5) {
-    k=0;
+  if (k > 5) {
+    k = 0;
   }
 
   return false;
+
 }
