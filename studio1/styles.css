@@ -110,6 +110,7 @@ input[type=submit], input[type=reset] {
 
 input[type=reset] {
   border: 1px solid red;
+  margin-top: 10px;
   color: red;
   background-color: white;
 }
@@ -133,7 +134,6 @@ input[type=reset]:focus, input[type=submit]:focus {
 /* generate button */
 
 input[type=submit] {
-  margin-top: 10px;
   border: 1px solid red;
   background-color: red;
   color: white;
