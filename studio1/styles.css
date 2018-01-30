@@ -10,7 +10,7 @@ div#form {
   padding-top: 12%;
 }
 
-form div:last-child{
+form div:last-child {
   padding-top: 100px;
 }
 
@@ -38,7 +38,6 @@ h1 {
   font-family: 'Domine', serif;
   color: black;
   font-size: 35px;
-  /* padding: 20px; */
   width: 80%;
   margin: auto;
   padding-top: 40px;
@@ -57,11 +56,8 @@ h2 {
 
 #form {
   font-family: 'Montserrat', sans-serif;
-  /* width: 450px; */
   width: 80%;
   margin: auto;
-  /* margin: left;
-  padding-left: 10%; */
 }
 
 /* left side of form */
