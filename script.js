@@ -16,7 +16,7 @@ function draw() {
 
   // stroke(mouseX / 6, 100, 100);
 
-  for (i = -4000; i <= 4000; i += 65) {
+  for (i = -4000; i <= 4000; i += 45) {
     bl(i);
     br(i);
   }
@@ -30,6 +30,6 @@ function bl(a) {
 
 function br(b) {
   // bezier(-800, b, mouseX * 2, mouseY - 250, mouseX * 2, mouseY - 250, 1200, 100);
-  bezier(-800, b, mouseX, mouseY/4, mouseX , mouseY/4, 1200, 100);
+  bezier(-800, b, mouseX, mouseY/4, mouseX +1500, mouseY/4, 1200, 100);
 
 }
