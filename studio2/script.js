@@ -1,3 +1,5 @@
+'use strict';
+
 var wb = document.getElementById('wb');
 var plan = document.getElementById('plan');
 var comp = document.getElementById('comp');

@@ -26,7 +26,7 @@ header {
   margin: auto;
 }
 
-/*************** objects in my bag STYLES ***************/
+/*************** objects in my bag IMG STYLES ***************/
 
 li img {
   display: block;
@@ -69,6 +69,30 @@ li img#plan {
   cursor: pointer;
 }
 
+/***************** FOOTER STYLES ***************/
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  clear: both;
+  left: 37%;
+  right: 37%;
+}
+
+#valid ul li {
+  display: inline;
+}
+
+#valid ul li img {
+  padding: 20px;
+  margin: auto;
+  height: 55px;
+}
+
+ul {
+  list-style-type: none;
+}
+
 /*************** DESKTOP MEDIA QUERY ***************/
 
 @media only screen and (min-width: 992px) {
@@ -99,28 +123,4 @@ li img#plan {
     height: 25px;
     padding: 10px;
   }
-}
-
-/***************** FOOTER STYLES ***************/
-
-footer {
-  position: fixed;
-  bottom: 0px;
-  clear: both;
-  left: 37%;
-  right: 37%;
-}
-
-#valid ul li {
-  display: inline;
-}
-
-#valid ul li img {
-  padding: 20px;
-  margin: auto;
-  height: 55px;
-}
-
-ul {
-  list-style-type: none;
 }
