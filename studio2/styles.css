@@ -1,10 +1,9 @@
 /*************** HEADER & BACKGROUND STYLES ***************/
 
-body,html {
+body, html {
   height: 100%;
   background-image: url(images/bg.gif);
   background-size: cover;
-  cursor: url('images/sharp.png'), pointer;
 }
 
 img {
@@ -29,25 +28,24 @@ header {
 
 /*************** objects in my bag STYLES ***************/
 
-
-li img{
+li img {
   display: block;
-  float:left;
+  float: left;
   cursor: pointer;
 }
 
-li img#wb{
+li img#wb {
   margin-left: 20px;
   width: 200px;
   padding: 20px 0;
 }
 
-li img#comp{
+li img#comp {
   width: 400px;
   padding: 40px 0 40px 15px;
 }
 
-li img#plan{
+li img#plan {
   width: 210px;
   top: 50%;
   padding: 100px 0 100px 20px;
@@ -64,47 +62,41 @@ li img#plan{
   margin: auto;
 }
 
-#closebutton1, #closebutton2, #closebutton3{
+#closebutton1, #closebutton2, #closebutton3 {
   margin-left: 0;
   margin-top: 0;
   width: 45px;
   cursor: pointer;
 }
+
 /*************** DESKTOP MEDIA QUERY ***************/
 
-@media only screen and (min-width: 992px){
-  header{
+@media only screen and (min-width: 992px) {
+  header {
     padding: 25px 80px;
     width: 300px;
     float: left;
   }
-
-  li img#wb{
+  li img#wb {
     width: 120px;
   }
-  li img#comp{
+  li img#comp {
     width: 200px;
   }
-  li img#plan{
+  li img#plan {
     width: 100px;
   }
-
   #overlay1, #overlay2, #overlay3 {
     width: 400px;
   }
-  #closebutton1, #closebutton2, #closebutton3{
+  #closebutton1, #closebutton2, #closebutton3 {
     width: 20px;
   }
-
-  #valid ul li a img{
+  #valid ul li a img {
     height: 25px;
     padding: 10px;
   }
-
-
-
 }
-
 
 /***************** FOOTER STYLES ***************/
 
@@ -120,7 +112,7 @@ footer {
   display: inline;
 }
 
-  #valid ul li img{
+#valid ul li img {
   padding: 20px;
   margin: auto;
   height: 55px;
