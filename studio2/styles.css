@@ -1,8 +1,11 @@
-body,html {
-  /* cursor: url('images/cursor.png'); */
-  background-image: url(images/bg.jpg);
-}
+/*************** HEADER & BACKGROUND STYLES ***************/
 
+body,html {
+  height: 100%;
+  background-image: url(images/bg.gif);
+  background-size: cover;
+  cursor: url('images/sharp.png'), pointer;
+}
 
 img {
   display: block;
@@ -14,17 +17,43 @@ img {
 }
 
 header img:last-child {
-  padding-top: 20px;
-  width: 80%;
+  padding: 20px 0 40px 0;
+  width: 60%;
 }
 
-#wb, header {
+header {
   padding-top: 30px;
+  width: 60%;
+  margin: auto;
 }
 
-#plan {
-  padding-top: 80px;
+/*************** objects in my bag STYLES ***************/
+
+
+li img{
+  display: block;
+  float:left;
+  cursor: pointer;
 }
+
+li img#wb{
+  margin-left: 20px;
+  width: 200px;
+  padding: 20px 0;
+}
+
+li img#comp{
+  width: 400px;
+  padding: 40px 0 40px 15px;
+}
+
+li img#plan{
+  width: 210px;
+  top: 50%;
+  padding: 100px 0 100px 20px;
+}
+
+/*************** OVERLAY STYLES ***************/
 
 #overlay1, #overlay2, #overlay3 {
   display: none;
@@ -35,34 +64,66 @@ header img:last-child {
   margin: auto;
 }
 
-#close1, #close2, #close3 {
-  /* position: relative; */
-  /* top: 10px;
-  right: 10px; */
-  cursor: pointer;
-}
-
 #closebutton1, #closebutton2, #closebutton3{
   margin-left: 0;
   margin-top: 0;
   width: 45px;
+  cursor: pointer;
+}
+/*************** DESKTOP MEDIA QUERY ***************/
+
+@media only screen and (min-width: 992px){
+  header{
+    padding: 25px 80px;
+    width: 300px;
+    float: left;
+  }
+
+  li img#wb{
+    width: 120px;
+  }
+  li img#comp{
+    width: 200px;
+  }
+  li img#plan{
+    width: 100px;
+  }
+
+  #overlay1, #overlay2, #overlay3 {
+    width: 400px;
+  }
+  #closebutton1, #closebutton2, #closebutton3{
+    width: 20px;
+  }
+
+  #valid ul li a img{
+    height: 25px;
+    padding: 10px;
+  }
+
+
+
 }
 
 
-/* FOOTER STYLES */
+/***************** FOOTER STYLES ***************/
 
 footer {
-  /* position: fixed; */
-  padding-top: 60px;
+  position: fixed;
   bottom: 0px;
-  height: 60px;
-  /* width: 100%; */
+  clear: both;
+  left: 37%;
+  right: 37%;
 }
 
 #valid ul li {
-  float: left;
+  display: inline;
+}
+
+  #valid ul li img{
   padding: 20px;
   margin: auto;
+  height: 55px;
 }
 
 ul {
