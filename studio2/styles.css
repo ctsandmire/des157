@@ -86,11 +86,14 @@ li img#plan {
   li img#plan {
     width: 100px;
   }
-  #overlay1, #overlay2, #overlay3 {
-    width: 400px;
+
+  section#overlay1 img, section#overlay2 img, section#overlay3 img {
+    width: 450px;
   }
-  #closebutton1, #closebutton2, #closebutton3 {
+
+  div#close1 img, div#close2 img, div#close3 img {
     width: 20px;
+
   }
   #valid ul li a img {
     height: 25px;
