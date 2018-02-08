@@ -115,3 +115,7 @@ section p a:hover {
 p {
   padding-top: 20px;
 }
+
+section#research p {
+  text-transform: none;
+}
