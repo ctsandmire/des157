@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Studio4</title>
+  <title>Studio 4</title>
   <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
   <!-- Fonts link below -->
-  <!-- <link href="styles.css" rel="stylesheet"> -->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.js'></script>
+  <!-- <link href="styles.css" rel="stylesheet"> -->
 
 </head>
 
@@ -21,10 +21,13 @@
   <form name="f">
     <label>What sign do you want to learn?</label>
     <input type="text" name="signsearch" id="signsearch"/>
-    <input type="submit" name="search" value="Go!"
+    <input type="submit" name="search" value="Go!" />
   </form>
 
-  <img id="sign" src="images/a.png" alt="sign for letter a" height="300"/>
+  <div id="showsigns">
+    <img id="sign" src="images/a.png" alt="sign for letter a" height="300"/>
+  </div>
+
 <!--
   <footer>
     <nav id="valid">
