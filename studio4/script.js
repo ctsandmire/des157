@@ -47,7 +47,7 @@ function processForm() {
     // 4 lines follow to  create a new image for each character in the string
     var img = document.createElement("img");
     img.src = 'images/' + signsearch.charAt(i) + '.svg';
-    img.style = 'height:200px',
+    img.style = 'height:200px';
 
     var src = document.getElementById('showsigns');
     src.appendChild(img);
