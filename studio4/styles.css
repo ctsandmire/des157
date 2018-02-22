@@ -16,9 +16,11 @@ p {
   margin-top: 100px;
 }
 
-img#checkanswer {
+#sign {
   position: absolute;
-  top: 375px;
+  top: 350px;
+  left: 45%;
+  height: 120px;
 }
 
 /* form */
@@ -52,12 +54,10 @@ button, #go, #study, #quiz {
 }
 
 #prev, #next {
-  margin: 10px 0;
+  margin: 10px 0 90px 0;
 }
 
 button#start {
-  /* position: absolute;
-  background: yellow; */
   top: 50%;
   left: 50%;
 }

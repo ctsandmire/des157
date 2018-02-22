@@ -1,4 +1,3 @@
-//make use of array from earlier
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
 var start = document.getElementById('start');
@@ -30,7 +29,7 @@ function beginGame() {
   //subtract 65 to use it in the alphabet array
   var signshown = randomsign - 65;
   // console.log(signshown);
-  quizsign.src = 'images/' + alphabet[signshown] + '.png';
+  quizsign.src = 'images/' + alphabet[signshown] + '.svg';
   // keyPressed();
 
   document.addEventListener("keydown", function(event) {

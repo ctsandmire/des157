@@ -16,7 +16,7 @@ next.addEventListener('click', function() {
     letter = -1;
   }
   letter++;
-  sign.src = 'images/' + alphabet[letter] + '.png';
+  sign.src = 'images/' + alphabet[letter] + '.svg';
   return false;
 })
 
@@ -26,7 +26,7 @@ prev.addEventListener('click', function() {
     letter = 26;
   }
   letter--;
-  sign.src = 'images/' + alphabet[letter] + '.png';
+  sign.src = 'images/' + alphabet[letter] + '.svg';
   return false;
 })
 
@@ -46,12 +46,8 @@ function processForm() {
     console.log(signsearch.charAt(i));
     // 4 lines follow to  create a new image for each character in the string
     var img = document.createElement("img");
-    img.src = 'images/' + signsearch.charAt(i) + '.png';
-
-    //need to have either ^that be in the }else{ part, but thats not practical because you would have a lot of searchable words
-    // if (signsearch == "mom" || signsearch == "mother"){
-    //   img.src = 'images/mom.png';
-    // }
+    img.src = 'images/' + signsearch.charAt(i) + '.svg';
+    img.style = 'height:200px',
 
     var src = document.getElementById('showsigns');
     src.appendChild(img);
@@ -61,40 +57,6 @@ function processForm() {
   return false;
 
 }
-
-
-// function processForm(){
-//   var signsearch = document.f.signsearch.value;
-//
-//   if (signsearch.length == 1){
-//     sign.src = 'images/' + signsearch + '.png';
-//     return false;
-//   }
-//
-//   if (signsearch.length > 1){
-//
-//     for (var i = 0; i < signsearch.length; i++){
-//       //removes default letter image
-//       sign.style.display='none';
-//
-//       console.log(signsearch.charAt(i));
-//
-//       // var img = document.createElement("img");
-//       // img.src = 'images/' + signsearch.charAt(i) + '.png';
-//       // var src = document.getElementById('showsigns');
-//       //
-//       // src.appendChild(img);
-//
-//
-//       //only displaying the last letter in the string as img src
-//       // sign.src = 'images/' + signsearch.charAt(i) + '.png';
-//
-//     }
-//
-//     //it is here to show all the letters of the string instead of just the last
-//     return false;
-//   }
-// }
 
 
 function setup() {
