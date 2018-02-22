@@ -6,7 +6,8 @@
   <title>Studio 4</title>
   <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
   <!-- Fonts link below -->
-  <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.js'></script>
@@ -22,25 +23,25 @@
   <form name="f">
     <label>Jump to Letter:</label>
     <input type="text" name="signsearch" id="signsearch"/>
-    <input type="submit" name="search" value="Go!" />
+    <input type="submit" name="search" value="Go!" id="go"/>
   </form>
   <section id="navbuttons">
     <button id="prev"><</button>
     <button id="next">></button>
   </section>
-  <section id="quiz">
+  <section>
     <button id="quiz"><a href="quiz.html">Quiz</a></button>
   </section>
 
   <div id="showsigns">
-    <img id="sign" src="images/a.png" alt="sign for letter a" height="300"/>
+    <img id="sign" src="images/a.png" alt="sign for letter a" height="200"/>
   </div>
 
 <div>
   <img id="checkanswer" src="images/g-01.png" alt="correct answer" />
 </div>
 
-<!--
+
   <footer>
     <nav id="valid">
       <ul>
@@ -48,7 +49,7 @@
         <li><a href="https://jigsaw.w3.org/css-validator/check/referer"><i class="fab fa-css3" aria-hidden="true"></i></a></li>
       </ul>
     </nav>
-  </footer> -->
+  </footer>
 
   <script src="script.js"></script>
 

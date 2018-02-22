@@ -114,6 +114,11 @@ section p a:hover {
 
 p {
   padding-top: 20px;
+  text-transform: none;
+}
+
+#storyboard {
+  margin-bottom: 50px;
 }
 
 section#research p {

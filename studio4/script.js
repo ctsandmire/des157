@@ -98,13 +98,13 @@ function processForm(){
 
 
 function setup(){
-  // createCanvas(320,240);
+  createCanvas(320,240);
   capture = createCapture(VIDEO);
   capture.size(320,240);
-  // capture.hide();
+  capture.hide();
 }
 
 function draw(){
-  // background(0);
-  // image(capture,0,0,320,240);
+  background(0);
+  image(capture,0,0,320,240);
 }

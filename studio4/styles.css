@@ -3,7 +3,18 @@
 body {
   text-align: center;
   margin: auto;
-  background: #E9DCD1;
+  background: #1b1b1b;
+  color: white;
+  font-family: 'Muli', sans-serif;
+}
+
+h1{
+  margin-top: 30px;
+}
+
+
+p{
+  margin-top: 100px;
 }
 
 
@@ -12,15 +23,59 @@ img#checkanswer {
   top: 375px;
 }
 
-
-canvas {
-  position:fixed;
-  top:0;
-  left:0;
-  z-index:1;
+/* form */
+input[type='text'] {
+  border: 1px solid #FDCF2F;
+  background: #1b1b1b;
+  padding: 5px 0;
+  color: #FDCF2F;
+  /* width: 49%; */
 }
 
-#content {
-  position:relative;
-  z-index:2;
+/* BUTTONS */
+
+button, #go {
+  padding: 5px 10px;
+  background: #1b1b1b;
+  border: 1px solid #FDCF2F; */
+}
+
+#study, #quiz {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 110px;
+}
+
+#study a, #quiz a, #go, #prev, #next, #start{
+  text-decoration: none;
+  color: #FDCF2F;
+}
+
+#prev, #next{
+  margin: 10px 0;
+}
+
+button#study
+
+button#start {
+  /* position: absolute;
+  background: yellow; */
+  top: 50%;
+  left: 50%;
+}
+
+/* FOOTER */
+
+#valid ul li {
+  display: inline;
+}
+
+#valid ul li a {
+  color: white;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
 }

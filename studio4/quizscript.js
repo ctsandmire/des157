@@ -1,34 +1,51 @@
 //make use of array from earlier
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-var letter = 0;
 
 var start = document.getElementById('start');
 var instructions = document.getElementById('instructions');
 var quizsign = document.getElementById('quizsign');
+var count = 1;
 
-
+//dont display img before game has begun
+quizsign.style.display='none';
 
 //display instructions
-
 
 //press start to begin
 //hide instructions
 //hide start button
 start.addEventListener('click', function(){
   instructions.style.display='none';
-  // start.style.display='none';
-  // return false;
+  start.style.display='none';
   beginGame();
 })
 
 //display a random letter
 function beginGame(){
-  var randomsign = Math.floor((Math.random() * 26));
-  console.log(randomsign);
+  //turn img display back on
+  quizsign.style.display='inline';
+  //generate a random number between 65 and 90
+  var randomsign = Math.floor((Math.random() * 26) + 65);
+  // console.log(randomsign);
+  //subtract 65 to use it in the alphabet array
+  var signshown = randomsign - 65;
+  // console.log(signshown);
+  quizsign.src = 'images/' + alphabet[signshown] + '.png';
+  // keyPressed();
 
-  quizsign.src = 'images/' + alphabet[randomsign] + '.png';
-
+  document.addEventListener("keydown", function(event) {
+    console.log(event.which);
+    //if key pressed corresponds with sign shown, show a new one
+    if (event.which === randomsign){
+      beginGame();
+      count++;
+    }
+    else{
+      count--;
+    }
+  })
+//create P that sends congrats message if count reaches 10
+  if (count == 10){
+  }
+  console.log(count);
 }
-
-
-//if key pressed matches sign, go to next image, else stay or do nothing
