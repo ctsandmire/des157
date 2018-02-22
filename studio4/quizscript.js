@@ -7,23 +7,23 @@ var quizsign = document.getElementById('quizsign');
 var count = 1;
 
 //dont display img before game has begun
-quizsign.style.display='none';
+quizsign.style.display = 'none';
 
 //display instructions
 
 //press start to begin
 //hide instructions
 //hide start button
-start.addEventListener('click', function(){
-  instructions.style.display='none';
-  start.style.display='none';
+start.addEventListener('click', function() {
+  instructions.style.display = 'none';
+  start.style.display = 'none';
   beginGame();
 })
 
 //display a random letter
-function beginGame(){
+function beginGame() {
   //turn img display back on
-  quizsign.style.display='inline';
+  quizsign.style.display = 'inline';
   //generate a random number between 65 and 90
   var randomsign = Math.floor((Math.random() * 26) + 65);
   // console.log(randomsign);
@@ -36,16 +36,14 @@ function beginGame(){
   document.addEventListener("keydown", function(event) {
     console.log(event.which);
     //if key pressed corresponds with sign shown, show a new one
-    if (event.which === randomsign){
+    if (event.which === randomsign) {
       beginGame();
       count++;
-    }
-    else{
+    } else {
       count--;
     }
   })
-//create P that sends congrats message if count reaches 10
-  if (count == 10){
-  }
+  //create P that sends congrats message if count reaches 10
+  if (count == 10) {}
   console.log(count);
 }

@@ -11,8 +11,8 @@ var letter = 0;
 var capture;
 
 // go to the next letter of the alphabet
-next.addEventListener('click', function(){
-  if (letter > 24){
+next.addEventListener('click', function() {
+  if (letter > 24) {
     letter = -1;
   }
   letter++;
@@ -21,8 +21,8 @@ next.addEventListener('click', function(){
 })
 
 //go to the previous letter of the alphabet
-prev.addEventListener('click', function(){
-  if (letter < 1){
+prev.addEventListener('click', function() {
+  if (letter < 1) {
     letter = 26;
   }
   letter--;
@@ -34,13 +34,13 @@ prev.addEventListener('click', function(){
 document.f.onsubmit = processForm;
 
 //display to the letter(s) that is/are entered in form
-function processForm(){
+function processForm() {
   var signsearch = document.f.signsearch.value;
-  for (var i = 0; i < signsearch.length; i++){
+  for (var i = 0; i < signsearch.length; i++) {
     // **NEED** clear old string
     // img.src = "";
     //hide default display
-    sign.style.display='none';
+    sign.style.display = 'none';
 
     // check to see if its working
     console.log(signsearch.charAt(i));
@@ -58,7 +58,7 @@ function processForm(){
 
   }
   // it goes outside to print all the letters to the console, instead of just 1st
-    return false;
+  return false;
 
 }
 
@@ -97,14 +97,14 @@ function processForm(){
 // }
 
 
-function setup(){
-  createCanvas(320,240);
+function setup() {
+  createCanvas(320, 240);
   capture = createCapture(VIDEO);
-  capture.size(320,240);
+  capture.size(320, 240);
   capture.hide();
 }
 
-function draw(){
+function draw() {
   background(0);
-  image(capture,0,0,320,240);
+  image(capture, 0, 0, 320, 240);
 }
