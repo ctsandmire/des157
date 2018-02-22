@@ -3,42 +3,36 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Studio 4</title>
+  <title>ASL Alphabet Quiz</title>
   <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
   <!-- Fonts link below -->
   <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
+  <link href="styles.css" rel="stylesheet">
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.js'></script>
-  <link href="styles.css" rel="stylesheet">
 
 </head>
 
 <body>
 
 
-  <h1>Learn The ASL Alphabet</h1>
+  <h1>ASL Alphabet Quiz</h1>
 
-  <form name="f">
-    <label>Jump to Letter:</label>
-    <input type="text" name="signsearch" id="signsearch"/>
-    <input type="submit" name="search" value="Go!" />
-  </form>
-  <section id="navbuttons">
-    <button id="prev"><</button>
-    <button id="next">></button>
-  </section>
-  <section id="quiz">
-    <button id="quiz"><a href="quiz.html">Quiz</a></button>
-  </section>
+<p id="instructions">
+  These are the instructions of the game
+</p>
+
+<section>
+  <button id="start">Start</button>
+</section>
+
 
   <div id="showsigns">
-    <img id="sign" src="images/a.png" alt="sign for letter a" height="300"/>
+    <img id="quizsign" src="images/a.png" alt="sign for letter a" height="300"/>
   </div>
 
-<div>
-  <img id="checkanswer" src="images/g-01.png" alt="correct answer" />
-</div>
+
 
 <!--
   <footer>
@@ -50,7 +44,7 @@
     </nav>
   </footer> -->
 
-  <script src="script.js"></script>
+  <script src="quizscript.js"></script>
 
 </body>
 

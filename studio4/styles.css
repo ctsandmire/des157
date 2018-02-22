@@ -1,0 +1,26 @@
+/* THE INTENTION/GOAL OF THIS CSS IS TO */
+
+body {
+  text-align: center;
+  margin: auto;
+  background: #E9DCD1;
+}
+
+
+img#checkanswer {
+  position: absolute;
+  top: 375px;
+}
+
+
+canvas {
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1;
+}
+
+#content {
+  position:relative;
+  z-index:2;
+}
