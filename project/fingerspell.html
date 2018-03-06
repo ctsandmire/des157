@@ -15,24 +15,31 @@
 </head>
 
 <body>
-<button id="start">Start</button>
-<br />
-<button id="reveal_answer_button">Reveal Answer</button>
-<button id="next_word_button">Next word</button>
-<br />
+  <button id="start">Start</button>
+  <br />
+  <button id="reveal_answer_button">Reveal Answer</button>
+  <button id="next_word_button">Next word</button>
+  <br />
+
+  <div id="reveal_answer_div" style="display: none;"></div>
 
 
-<div id="reveal_answer_div" style="display: none;"></div>
 
-<div id="answer_div">
-  <input id="answer_input" type="text" placeholder="answer" />
-  <button id="check_answer_button">Check</button>
-</div>
+  <form name="f">
+    <label for="answer_input">answer:</label>
+    <input type="text" name="answer_input" id="answer_input" />
+    <!-- <button id="check_answer_button">Check</button> -->
+    <input type="submit" name="check_answer_button" value="Check" id="check_answer_button">
+  </form>
 
-<div id="spelling_area">
-  <!-- set source to a transparent pixel -->
-  <img id="letterimg" src="images/a.svg"/>
-</div>
+
+
+
+
+  <div id="spelling_area">
+    <!-- set source to a transparent pixel -->
+    <img id="letterimg" src="images/a.svg" alt="current letter" />
+  </div>
 
 
 
