@@ -1,3 +1,51 @@
+html {
+  background: url(images/bg.svg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body{
+  text-align: center;
+}
+
 #letterimg {
   height: 300px;
+  margin: auto;
+}
+
+button, #check_answer_button, #answer_input {
+  padding: 5px 10px;
+  border: 1px solid #FDCF2F;
+  margin-bottom: 10px;
+}
+
+
+
+
+/* FOOTER */
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  height: 60px;
+  width: 100%;
+  text-align: center;
+}
+
+#valid ul li {
+  float: right;
+  padding-right: 10px;
+}
+
+#valid ul li a {
+  text-decoration: none;
+  font-size: 32px;
+  color: white;
+  height: 15px;
+}
+
+ul {
+  list-style-type: none;
 }

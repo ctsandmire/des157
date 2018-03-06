@@ -1,11 +1,12 @@
-//
+// left off where it writes "correct" to the console if you type hungry
+// Next issue: 'next' button isnt working properly, might be something to do woth i
 'use strict';
 
 var letterimg = document.getElementById('letterimg');
 var words = ["hungry", "family", "cat"];
 var next = document.getElementById('next_word_button');
-// var check = document.getElementById('check_answer_button');
-var user_answer = document.f.answer_input.value;
+var reveal = document.getElementById('reveal_answer_button');
+var the_form = document.getElementById('the_form');
 
 
 // var user_answer = document.getElementById('answer_input').value;
@@ -16,17 +17,23 @@ var letterImgInt;
 var i = 0;
 
 
-
 document.f.onsubmit = checkAnswer;
 
 
 letterimg.style.display = 'none';
+
+next.style.display = 'none';
+reveal.style.display = 'none';
+the_form.style.display = 'none';
 
 // setInterval(spell_word(current_word), 1000);
 //begin game
 start.addEventListener('click', function() {
   //start button goes away
   start.style.display = 'none';
+  next.style.display = 'inline';
+  reveal.style.display = 'inline';
+  the_form.style.display = 'block';
   //show each sign in the array for a quick sec...then change to re-display image that is clickable but thats further down the road
   //accept correct string of letters in the input field as the correct answer
   //display some sort of correct alert
@@ -62,13 +69,17 @@ function spell_word() {
   //}
 }
 
-
 function checkAnswer(event) {
   //take what is entered
+  var user_answer = document.f.answer_input.value.toLowerCase();
   console.log('value entered is:' + user_answer);
   event.preventDefault();
-  //turn it into lowercase
+  clearInterval(letterImgInt);
+  //turn it into lowercase?
   //check if its the ame as current_word
+  if (user_answer == current_word){
+    console.log("correct!");
+  }
   //if yes display correct signal (and possibly go to the next word)
   //if no display incorrect signal
 }
@@ -78,12 +89,13 @@ function checkAnswer(event) {
 //when you click the next button, it runs the function that changes words array to the next word in the array, aka adds one to order and therefore changes current_word
 // then spells current word by calling the spell_word function
 next.addEventListener('click', function() {
+  // have it clear the value entered in the form
   order++;
   console.log("the word is now: " + words[order]);
   //re-establish(?) current_word so it changes when order changes
   current_word = words[order];
   // spell_word(current_word);
-  setInterval(spell_word(current_word), 600);
+  setInterval(spell_word(), 600);
 
   // use this, above, later to make it stop at the end of the word bank
   // for(var i=0; i < words.length; i++){}
