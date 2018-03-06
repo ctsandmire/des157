@@ -35,6 +35,7 @@ document.f.onsubmit = processForm;
 
 //display to the letter(s) that is/are entered in form
 function processForm() {
+  //puts value entered into a variable which is a string
   var signsearch = document.f.signsearch.value;
   for (var i = 0; i < signsearch.length; i++) {
     // **NEED** clear old string
