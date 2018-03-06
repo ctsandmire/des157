@@ -10,7 +10,7 @@
 
   <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js'></script> -->
   <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.js'></script> -->
-  <!-- <link href="styles.css" rel="stylesheet"> -->
+  <link href="styles.css" rel="stylesheet">
 
 </head>
 
@@ -25,25 +25,26 @@
 <div id="reveal_answer_div" style="display: none;"></div>
 
 <div id="answer_div">
-  <input id="answer_input" placeholder="answer" />
+  <input id="answer_input" type="text" placeholder="answer" />
   <button id="check_answer_button">Check</button>
 </div>
 
 <div id="spelling_area">
-  <img id="letterimg" />
+  <!-- set source to a transparent pixel -->
+  <img id="letterimg" src="images/a.svg"/>
 </div>
 
 
 
-  <!-- <footer>
+  <footer>
     <nav id="valid">
       <ul>
         <li><a href="https://validator.w3.org/check?uri=referer"><i class="fab fa-html5" aria-hidden="true"></i></a></li>
         <li><a href="https://jigsaw.w3.org/css-validator/check/referer"><i class="fab fa-css3" aria-hidden="true"></i></a></li>
-        <li><a href="https://p5js.org"><i class="fas fa-book" aria-hidden="true"></i></a></li>
+        <!-- <li><a href="https://p5js.org"><i class="fas fa-book" aria-hidden="true"></i></a></li> -->
       </ul>
     </nav>
-  </footer> -->
+  </footer>
 
   <script src="fingerspell.js"></script>
 
