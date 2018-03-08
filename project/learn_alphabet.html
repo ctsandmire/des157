@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Fingerspelling Game</title>
+  <title>Learn the Alphabet</title>
   <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
   <!-- Fonts link below -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -15,36 +15,15 @@
 </head>
 
 <body>
-  <h1>Fingerspelling Game</h1>
+  <h1>Learn the Alphabet</h1>
+
   <button id="home"><a href="index.html">Home</a></button>
 
-  <p>
-    Here are instructions for the game, etc, etc...
-  </p>
-  <button id="start">Start</button>
-  <br />
-  <button id="reveal_answer_button">Reveal Answer</button>
-  <button id="next_word_button">Next word</button>
-  <br />
+  <button id="prev">&lt;</button>
+  <button id="next">></button>
 
-  <div id="reveal_answer_div" style="display: none;"></div>
-
-
-
-  <form name="f" id="the_form">
-    <label for="answer_input">answer:</label>
-    <input type="text" name="answer_input" id="answer_input" />
-    <!-- <button id="check_answer_button">Check</button> -->
-    <input type="submit" name="check_answer_button" value="Check" id="check_answer_button">
-  </form>
-
-
-
-
-
-  <div id="spelling_area">
-    <!-- set source to a transparent pixel -->
-    <img id="letterimg" src="images/a.svg" alt="current letter" />
+  <div id="showsigns">
+    <img id="sign" src="images/a.svg" alt="sign for letter" height="200" />
   </div>
 
 
@@ -59,7 +38,7 @@
     </nav>
   </footer>
 
-  <script src="fingerspell.js"></script>
+  <script src="learn_alphabet.js"></script>
 
 </body>
 

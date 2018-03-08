@@ -21,7 +21,12 @@ button, #check_answer_button, #answer_input {
   margin-bottom: 10px;
 }
 
-
+#home {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 110px;
+}
 
 
 /* FOOTER */
