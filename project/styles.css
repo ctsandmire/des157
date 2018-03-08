@@ -1,4 +1,6 @@
-html {
+/* BACKGROUND STYLES */
+
+html, #fingerspell_page {
   background: url(images/bg.svg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -8,6 +10,7 @@ html {
 
 body{
   text-align: center;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #letterimg {
@@ -15,7 +18,11 @@ body{
   margin: auto;
 }
 
-button, #check_answer_button, #answer_input {
+h1 {
+  font-weight: 700;
+}
+
+a, button, #check_answer_button, #answer_input {
   padding: 5px 10px;
   border: 1px solid #FDCF2F;
   margin-bottom: 10px;
