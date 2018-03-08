@@ -42,4 +42,5 @@ function setup() {
 function draw() {
   background(0);
   image(capture, 0, 0, 320, 240);
+  console.log("drawing");
 }

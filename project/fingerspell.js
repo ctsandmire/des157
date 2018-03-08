@@ -1,5 +1,4 @@
-// left off where it writes "correct" to the console if you type hungry
-// Next issue: 'next' button isnt working properly, might be something to do woth i
+// it seems to be going faster by the time you get to the second or third word, maybe check if adding clearInterval into some spts helps
 'use strict';
 
 var letterimg = document.getElementById('letterimg');
@@ -8,7 +7,6 @@ var next = document.getElementById('next_word_button');
 var reveal = document.getElementById('reveal_answer_button');
 var the_form = document.getElementById('the_form');
 
-
 // var user_answer = document.getElementById('answer_input').value;
 
 var order = 0;
@@ -16,9 +14,7 @@ var current_word = words[order];
 var letterImgInt;
 var i = 0;
 
-
 document.f.onsubmit = checkAnswer;
-
 
 letterimg.style.display = 'none';
 
@@ -41,7 +37,7 @@ start.addEventListener('click', function() {
 
   //call the word spelling function using the current_word = words[order] = words [0] = "hungry"
   // spell_word(current_word);
-  letterImgInt = setInterval(spell_word, 400);
+  letterImgInt = setInterval(spell_word, 300);
 
 
 })
@@ -52,22 +48,28 @@ function spell_word() {
   // console.log("the word we are spelling is: " + current_word);
   letterimg.style.display = 'block';
 
-  //for (i = 0; i < a.length; i++){
-  // var img = document.getElementById("letterimg");
   letterimg.src = 'images/' + current_word.charAt(i) + '.svg';
   console.log('current letter: ' + current_word.charAt(i));
-  // var src = document.getElementById('spelling_area');
-  // src.appendChild(img);
+
   i++;
   if (i > current_word.length) {
+    clearInterval(letterImgInt);
+
     letterimg.src = 'images/replay.svg';
     letterimg.style.cursor = "pointer";
-    letterimg.addEventListener('click', function() {
-      i = 0;
-    })
   }
   //}
 }
+
+
+// when you click on the img that says "click to replay" it re-spells the word
+letterimg.addEventListener('click', function() {
+  i = 0;
+  setInterval(spell_word, 300);
+})
+
+
+
 
 function checkAnswer(event) {
   //take what is entered
@@ -92,10 +94,12 @@ next.addEventListener('click', function() {
   // have it clear the value entered in the form
   order++;
   console.log("the word is now: " + words[order]);
-  //re-establish(?) current_word so it changes when order changes
+  //re-establish current_word so it changes when order changes
   current_word = words[order];
   // spell_word(current_word);
-  setInterval(spell_word(), 600);
+  console.log(current_word);
+  i=0;
+  setInterval(spell_word, 400);
 
   // use this, above, later to make it stop at the end of the word bank
   // for(var i=0; i < words.length; i++){}
