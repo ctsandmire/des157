@@ -119,3 +119,20 @@ next.addEventListener('click', function() {
 // if input = current_word, display some correct alert, possibly call next function and get rid of next word button entirely
 // if input != current_word, display some incorrent alert, clear value and show letters again or have button to try again, then youd also need button to go to the next word if they didnt want to try again
 // have a different thing that shows you how to fingerspell any word (string of letters)?
+
+// menu duplicate
+var menu = document.getElementById('menu');
+
+menu.addEventListener('mouseenter', function(event){
+  mySidenav.style.width = '150px';
+  mySidenav.style.left = '40px';
+  // menu.style.color = '#ECE71F';
+  console.log("mouseover");
+})
+
+mySidenav.addEventListener('mouseleave', function(event){
+  mySidenav.style.width = '0px';
+  mySidenav.style.left = '-100px';
+  // menu.style.color = '#3030F9';
+  console.log("mouseover");
+})
