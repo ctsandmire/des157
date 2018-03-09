@@ -1,4 +1,5 @@
-// it seems to be going faster by the time you get to the second or third word, maybe check if adding clearInterval into some spts helps
+//where do I put the Settimeout function so that it doesn't get faster and faster each time
+
 'use strict';
 
 var letterimg = document.getElementById('letterimg');
@@ -53,11 +54,13 @@ function spell_word() {
 
   i++;
   if (i > current_word.length) {
-    clearInterval(letterImgInt);
 
     letterimg.src = 'images/replay.svg';
     letterimg.style.cursor = "pointer";
+    clearInterval(letterImgInt);
+
   }
+
   //}
 }
 
@@ -66,6 +69,8 @@ function spell_word() {
 letterimg.addEventListener('click', function() {
   i = 0;
   setInterval(spell_word, 300);
+  clearInterval(letterImgInt);
+
 })
 
 
@@ -81,6 +86,9 @@ function checkAnswer(event) {
   //check if its the ame as current_word
   if (user_answer == current_word){
     console.log("correct!");
+    //alert overlay, correct
+    //show gif of sign for family
+    //press any key to go to the next word
   }
   //if yes display correct signal (and possibly go to the next word)
   //if no display incorrect signal

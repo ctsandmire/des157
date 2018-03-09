@@ -1,17 +1,57 @@
 /* BACKGROUND STYLES */
 
-html, #fingerspell_page {
+/* html, #fingerspell_page {
   background: url(images/bg.svg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+} */
 
 body {
-  text-align: center;
-  font-family: 'Ubuntu', sans-serif;
+  /* text-align: center; */
+  font-family: 'Raleway', sans-serif;
+  background-color: #bff7f3;
+  /* background-color: #fff; */
+
+  padding-top: 27px;
+  padding-left: 300px;
+  color: #3030F9;
 }
+
+#menu{
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  cursor: pointer;
+  color: #3030F9;
+}
+
+#logo {
+  padding-bottom: 100px;
+}
+
+#hand1 {
+  position: fixed;
+  bottom: -60px;
+  left: -50px;
+}
+
+#hand2{
+  position: fixed;
+  top: -60px;
+  right: -50px;
+}
+
+#utter {
+  display: inline;
+  font-size: 50px;
+  padding-left: 20px;
+}
+
+/* #menu p {
+  display: inline;
+} */
 
 #letterimg {
   height: 300px;
@@ -19,13 +59,16 @@ body {
 }
 
 h1 {
-  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
 }
 
 a, #check_answer_button, #answer_input {
-  padding: 5px 10px;
-  border: 1px solid #FDCF2F;
+  padding: 10px 20px;
+  border: 1px solid #3030F9;
+  border-radius: 22px;
   margin-bottom: 10px;
+  color: #3030F9;
 }
 
 #home {
@@ -49,7 +92,7 @@ footer {
   float: right;
   padding-right: 10px;
 }
-
+/* 
 #valid ul li a {
   text-decoration: none;
   border: none;
@@ -60,4 +103,4 @@ footer {
 
 ul {
   list-style-type: none;
-}
+} */
