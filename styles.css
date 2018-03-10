@@ -41,6 +41,13 @@ section#noborder{
   border-right: none;
 }
 
+.objectives li {
+  text-transform: none;
+  margin: 20px 0 0 15px;
+  list-style-type: square;
+  font-weight: normal;
+}
+
 h2 {
   margin-top: 15px;
   font-size: 35px;
