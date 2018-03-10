@@ -47,6 +47,10 @@ h2 {
   letter-spacing: 3px;
 }
 
+ul li:last-child, ol li:last-child {
+  padding-bottom: 20px;
+}
+
 li a {
   display: inline-block;
   width: 90%;
