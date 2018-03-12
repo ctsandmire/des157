@@ -3,7 +3,7 @@
 'use strict';
 
 var letterimg = document.getElementById('letterimg');
-var words = ["hungry", "family", "cat"];
+var words = ["er", "hungry", "family", "cat"];
 var next = document.getElementById('next_word_button');
 var reveal = document.getElementById('reveal_answer_button');
 var the_form = document.getElementById('the_form');
@@ -38,9 +38,10 @@ start.addEventListener('click', function() {
 
   //call the word spelling function using the current_word = words[order] = words [0] = "hungry"
   // spell_word(current_word);
+  // clearInterval(letterImgInt);
+  // console.log('start cleared letterImgInt: ' + letterImgInt);
+
   letterImgInt = setInterval(spell_word, 300);
-
-
 })
 
 // this is the main function
@@ -52,28 +53,38 @@ function spell_word() {
   letterimg.src = 'images/' + current_word.charAt(i) + '.svg';
   console.log('current letter: ' + current_word.charAt(i));
 
-  i++;
-  if (i > current_word.length) {
-
-    letterimg.src = 'images/replay.svg';
-    letterimg.style.cursor = "pointer";
+  if (i >= current_word.length-1) {
+    console.log ('i is: ' + i + '; current_word.length is: ' + current_word.length);
+    // letterImgInt = null;
     clearInterval(letterImgInt);
+    i=0;
+  //  console.log('clearInterval called' + letterImgInt);
+
+    //letterimg.src = 'images/replay.svg'; // --add the listener to this
+    //letterimg.style.cursor = "pointer";
+
+    // if i clear interval here, it doesnt show anything
 
   }
-
+  i++;
   //}
 }
 
 
 // when you click on the img that says "click to replay" it re-spells the word
-letterimg.addEventListener('click', function() {
-  i = 0;
-  setInterval(spell_word, 300);
-  clearInterval(letterImgInt);
-
-})
-
-
+// -- add this to a div with just the replay (absolute position right over the finger images)
+// letterimg.addEventListener('click', function() {
+//   i = 0;
+//
+//   letterImgInt = null;
+//   clearInterval(letterImgInt);
+//
+//   setInterval(spell_word, 300);
+//
+//
+// })
+//
+//
 
 
 function checkAnswer(event) {
@@ -81,10 +92,11 @@ function checkAnswer(event) {
   var user_answer = document.f.answer_input.value.toLowerCase();
   console.log('value entered is:' + user_answer);
   event.preventDefault();
+  letterImgInt = null;
   clearInterval(letterImgInt);
   //turn it into lowercase?
   //check if its the ame as current_word
-  if (user_answer == current_word){
+  if (user_answer == current_word) {
     console.log("correct!");
     //alert overlay, correct
     //show gif of sign for family
@@ -106,8 +118,8 @@ next.addEventListener('click', function() {
   current_word = words[order];
   // spell_word(current_word);
   console.log(current_word);
-  i=0;
-  setInterval(spell_word, 400);
+  i = 0;
+  setInterval(spell_word, 300);
 
   // use this, above, later to make it stop at the end of the word bank
   // for(var i=0; i < words.length; i++){}
@@ -123,16 +135,25 @@ next.addEventListener('click', function() {
 // menu duplicate
 var menu = document.getElementById('menu');
 
-menu.addEventListener('mouseenter', function(event){
+menu.addEventListener('mouseenter', function(event) {
   mySidenav.style.width = '150px';
   mySidenav.style.left = '40px';
   // menu.style.color = '#ECE71F';
   console.log("mouseover");
 })
 
-mySidenav.addEventListener('mouseleave', function(event){
+mySidenav.addEventListener('mouseleave', function(event) {
   mySidenav.style.width = '0px';
   mySidenav.style.left = '-100px';
   // menu.style.color = '#3030F9';
   console.log("mouseover");
+})
+
+//fun effect footer navs
+var left_button_footer = document.getElementById('left_button_footer');
+var prev_page = document.getElementById('prev_page');
+
+left_button_footer.addEventListener('mouseover', function(event) {
+  prev_page.style.opacity = '.5';
+  console.log('message recieved');
 })

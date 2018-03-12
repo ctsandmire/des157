@@ -97,6 +97,11 @@ h1 {
   animation-duration: 2s;
 }
 
+/* #bottom_nav p{
+  animation-name: bottom_nav_slide;
+  animation-duration: 2s;
+} */
+
 h3{
   padding: 40px 0 15px 0;
 }
@@ -115,8 +120,15 @@ a, #check_answer_button, #answer_input {
 /* KEYFRAMES */
 @keyframes header_slide {
   from {padding-left: 80px;}
-    to{padding-left: none;}
+    to{padding-left: 0px;}
 }
+
+/* @keyframes bottom_nav_slide {
+  from {margin-top: 50px;}
+    to{margin-top: 0px;}
+} */
+
+
 
 
 /* FOOTER */
@@ -168,22 +180,29 @@ bottom: 0px;
 
 #bottom_nav section {
   /* background: white; */
-  margin: 10px;
+  margin: 15px;
   width: 150px;
-  padding-left: none;
+  padding-left: 0px;
   float: left;
-}
-
-#bottom_nav section:first-child h2{
-  text-align: right;
 }
 
 #bottom_nav p, #bottom_nav a{
   float: left;
 }
 
+#bottom_nav a{
+  border: none;
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+
 #bottom_nav section:first-child a{
   float: right;
+}
+
+#bottom_nav section:first-child h2{
+  text-align: right;
 }
 
 #bottom_nav section:last-child p{
