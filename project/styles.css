@@ -195,6 +195,7 @@ bottom: 0px;
   to{opacity: 1;}
 }
 
+/* add a thing that shows like 4 circles in a line and fill the one that your page is at in the order */
 /* when you hover on the a, the p will go from 0 opacity to 1 */
 #bottom_nav a:hover{
 }
