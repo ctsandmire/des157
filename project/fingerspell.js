@@ -1,9 +1,8 @@
-//where do I put the Settimeout function so that it doesn't get faster and faster each time
-
 'use strict';
 
 var letterimg = document.getElementById('letterimg');
-var words = ["er", "hungry", "family", "cat"];
+var replay = document.getElementById('replay');
+var words = ["hi", "hungry", "family", "cat"];
 var next = document.getElementById('next_word_button');
 var reveal = document.getElementById('reveal_answer_button');
 var the_form = document.getElementById('the_form');
@@ -13,19 +12,20 @@ var the_form = document.getElementById('the_form');
 var order = 0;
 var current_word = words[order];
 var letterImgInt;
-var i = 0;
+var i;
 
 document.f.onsubmit = checkAnswer;
 
 letterimg.style.display = 'none';
-
+replay.style.display = 'none';
 next.style.display = 'none';
 reveal.style.display = 'none';
 the_form.style.display = 'none';
 
-// setInterval(spell_word(current_word), 1000);
+
 //begin game
 start.addEventListener('click', function() {
+  i = 0;
   //start button goes away
   start.style.display = 'none';
   next.style.display = 'inline';
@@ -47,44 +47,50 @@ start.addEventListener('click', function() {
 // this is the main function
 // it takes the current_word, breaks it into letters and uses those to display a series of images
 function spell_word() {
-  // console.log("the word we are spelling is: " + current_word);
-  letterimg.style.display = 'block';
+  console.log('in spell_word' + i);
+  if (i < current_word.length) {
 
-  letterimg.src = 'images/' + current_word.charAt(i) + '.svg';
-  console.log('current letter: ' + current_word.charAt(i));
+    // console.log("the word we are spelling is: " + current_word);
+    letterimg.style.display = 'block';
+    // cycle through each letter:
+    letterimg.src = 'images/' + current_word.charAt(i) + '.svg';
+    console.log('current letter: ' + current_word.charAt(i));
+    //if else statement
+    // if i < length , above stuff, if theres a letter left, spell it
+    //else (stop, clear interval)
 
-  if (i >= current_word.length-1) {
-    console.log ('i is: ' + i + '; current_word.length is: ' + current_word.length);
+  } else {
+    console.log('i is: ' + i + '; current_word.length is: ' + current_word.length);
     // letterImgInt = null;
+    replay.style.display = 'block';
+    console.log("timer" + letterImgInt);
     clearInterval(letterImgInt);
-    i=0;
-  //  console.log('clearInterval called' + letterImgInt);
+    // i = 0;
+    //  console.log('clearInterval called' + letterImgInt);
 
-    //letterimg.src = 'images/replay.svg'; // --add the listener to this
     //letterimg.style.cursor = "pointer";
 
     // if i clear interval here, it doesnt show anything
-
   }
-  i++;
-  //}
+
+i++;
+//}
 }
 
 
 // when you click on the img that says "click to replay" it re-spells the word
 // -- add this to a div with just the replay (absolute position right over the finger images)
-// letterimg.addEventListener('click', function() {
-//   i = 0;
-//
-//   letterImgInt = null;
-//   clearInterval(letterImgInt);
-//
-//   setInterval(spell_word, 300);
-//
-//
-// })
-//
-//
+replay.addEventListener('click', function() {
+  replay.style.display = 'none';
+
+  i = 0;
+  letterImgInt = null;
+  clearInterval(letterImgInt);
+
+  setInterval(spell_word, 300);
+
+
+})
 
 
 function checkAnswer(event) {
@@ -119,7 +125,10 @@ next.addEventListener('click', function() {
   // spell_word(current_word);
   console.log(current_word);
   i = 0;
-  setInterval(spell_word, 300);
+  // *****
+  // *****
+  // THE WHOLE ISSUE WAS HERE BECAUSE I NEEDED TO REASSIGN THE SETINTERVAL THING... before it was just setInterval(spell_word, 1000)
+  letterImgInt = setInterval(spell_word, 1000);
 
   // use this, above, later to make it stop at the end of the word bank
   // for(var i=0; i < words.length; i++){}
@@ -139,14 +148,14 @@ menu.addEventListener('mouseenter', function(event) {
   mySidenav.style.width = '150px';
   mySidenav.style.left = '40px';
   // menu.style.color = '#ECE71F';
-  console.log("mouseover");
+  // console.log("mouseover");
 })
 
 mySidenav.addEventListener('mouseleave', function(event) {
   mySidenav.style.width = '0px';
   mySidenav.style.left = '-100px';
   // menu.style.color = '#3030F9';
-  console.log("mouseover");
+  // console.log("mouseover");
 })
 
 //fun effect footer navs

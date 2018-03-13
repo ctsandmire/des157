@@ -91,6 +91,13 @@ body {
   margin: auto;
 }
 
+#replay {
+  height:150px;
+  position: absolute;
+  top: 200px;
+  cursor: pointer;
+}
+
 h1 {
   font-weight: bold;
   animation-name: header_slide;
