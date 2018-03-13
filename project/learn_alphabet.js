@@ -3,6 +3,7 @@
 var sign = document.getElementById('sign');
 var next = document.getElementById('next');
 var prev = document.getElementById('prev');
+var current_letter = document.getElementById('current_letter');
 //array to easily call up images
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 //begin at "a"
@@ -18,7 +19,11 @@ next.addEventListener('click', function() {
   letter++;
   sign.src = 'images/' + alphabet[letter] + '.svg';
   return false;
+
 })
+
+current_letter.innerHTML = (alphabet[letter].toUpperCase());
+
 
 //go to the previous letter of the alphabet
 prev.addEventListener('click', function() {
@@ -29,6 +34,7 @@ prev.addEventListener('click', function() {
   sign.src = 'images/' + alphabet[letter] + '.svg';
   return false;
 })
+
 
 // menu duplicate
 var menu = document.getElementById('menu');

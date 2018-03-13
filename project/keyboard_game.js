@@ -8,10 +8,15 @@ var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
 var start = document.getElementById('start');
 var instructions = document.getElementById('instructions');
 var quizsign = document.getElementById('quizsign');
+var start_statement = document.getElementById('start_statement');
+var help = document.getElementById('help');
+var score = document.getElementById("score");
 var count = -1;
+var signshown;
 
 //dont display img before game has begun
 quizsign.style.display = 'none';
+help.style.display = 'none'
 
 //display instructions
 
@@ -19,8 +24,10 @@ quizsign.style.display = 'none';
 //hide instructions
 //hide start button
 start.addEventListener('click', function() {
-  instructions.style.display = 'none';
+  // instructions.style.display = 'none';
   start.style.display = 'none';
+  start_statement.style.display = 'none';
+  help.style.display = 'block'
   beginGame();
 })
 
@@ -34,7 +41,7 @@ function beginGame() {
   var randomsign = Math.floor((Math.random() * 26) + 65);
   // console.log(randomsign);
   //subtract 65 to use it in the alphabet array
-  var signshown = randomsign - 65;
+  signshown = randomsign - 65;
   // console.log(signshown);
   quizsign.src = 'images/' + alphabet[signshown] + '.svg';
 
@@ -60,7 +67,16 @@ function beginGame() {
   //create P that sends congrats message if count reaches 10
 //   if (count == 10) {}
   console.log("score = " + count);
+  score.innerHTML = ("Score: " + count);
 }
+
+help.addEventListener('click', function(){
+  console.log(alphabet[signshown]);
+  window.alert('the letter is ' + alphabet[signshown].toUpperCase());
+})
+
+
+
 
 // menu duplicate
 var menu = document.getElementById('menu');

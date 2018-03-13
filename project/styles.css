@@ -31,7 +31,7 @@ body {
 }
 
 .sidenav {
-  height: 50%;
+  height: 70%;
   width: 0px;
   position: fixed;
   top: 0;
@@ -45,11 +45,21 @@ body {
 .sidenav a {
   padding: 10px 0 10px 0px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 24px;
   color: #3030F9;
   display: block;
   transition: 0.3s;
   border: none;
+}
+
+.sidenav ul li a{
+  font-size: 12px;
+  display: block;
+}
+.sidenav ul {
+  width: 100px;
+  list-style: none;
+  padding-left: 0px;
 }
 
 .sidenav a:hover {
@@ -87,14 +97,14 @@ body {
 } */
 
 #letterimg {
-  height: 300px;
+  height: 250px;
   margin: auto;
 }
 
 #replay {
   height:150px;
   position: absolute;
-  top: 200px;
+  top: 300px;
   cursor: pointer;
 }
 
@@ -122,6 +132,12 @@ a, #check_answer_button, #answer_input {
   text-decoration: none;
 }
 
+/* a:hover, #check_answer_button:hover, #answer_input:hover {
+  border: 1px solid #ECE71F;
+  color: #ECE71F;
+  background: #3030F9;
+  transition: 1s;
+} */
 
 
 /* KEYFRAMES */
@@ -236,4 +252,9 @@ bottom: 0px;
 
 #bottom_nav p{
   font-size: 12px;
+}
+
+/* FINGERSPELLING PAGE */
+#the_form{
+  padding-top: 10px;
 }

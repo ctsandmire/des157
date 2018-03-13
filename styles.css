@@ -141,3 +141,13 @@ p {
 section#research p {
   text-transform: none;
 }
+
+#aud-test-link {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#aud-test-link:hover {
+    border: 1px solid #CEFF00;
+    color: #CEFF00;
+}

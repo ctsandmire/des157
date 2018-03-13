@@ -2,10 +2,11 @@
 
 var letterimg = document.getElementById('letterimg');
 var replay = document.getElementById('replay');
-var words = ["hi", "hungry", "family", "cat"];
+var words = ["hungry", "family", "cat", "super", "sandwich"];
 var next = document.getElementById('next_word_button');
 var reveal = document.getElementById('reveal_answer_button');
 var the_form = document.getElementById('the_form');
+var start_statement = document.getElementById('start_statement')
 
 // var user_answer = document.getElementById('answer_input').value;
 
@@ -31,6 +32,7 @@ start.addEventListener('click', function() {
   next.style.display = 'inline';
   reveal.style.display = 'inline';
   the_form.style.display = 'block';
+  start_statement.style.display = 'none';
   //show each sign in the array for a quick sec...then change to re-display image that is clickable but thats further down the road
   //accept correct string of letters in the input field as the correct answer
   //display some sort of correct alert
@@ -41,7 +43,7 @@ start.addEventListener('click', function() {
   // clearInterval(letterImgInt);
   // console.log('start cleared letterImgInt: ' + letterImgInt);
 
-  letterImgInt = setInterval(spell_word, 300);
+  letterImgInt = setInterval(spell_word, 800);
 })
 
 // this is the main function
@@ -87,7 +89,7 @@ replay.addEventListener('click', function() {
   letterImgInt = null;
   clearInterval(letterImgInt);
 
-  setInterval(spell_word, 300);
+  letterImgInt = setInterval(spell_word, 800);
 
 
 })
@@ -104,9 +106,12 @@ function checkAnswer(event) {
   //check if its the ame as current_word
   if (user_answer == current_word) {
     console.log("correct!");
+    window.alert("correct!");
     //alert overlay, correct
     //show gif of sign for family
     //press any key to go to the next word
+  } else {
+    window.alert("incorrect, try again!");
   }
   //if yes display correct signal (and possibly go to the next word)
   //if no display incorrect signal
@@ -128,12 +133,19 @@ next.addEventListener('click', function() {
   // *****
   // *****
   // THE WHOLE ISSUE WAS HERE BECAUSE I NEEDED TO REASSIGN THE SETINTERVAL THING... before it was just setInterval(spell_word, 1000)
-  letterImgInt = setInterval(spell_word, 1000);
+  clearInterval(letterImgInt);
+
+  letterImgInt = setInterval(spell_word, 800);
 
   // use this, above, later to make it stop at the end of the word bank
   // for(var i=0; i < words.length; i++){}
 
   //side note: this still works if u havent pressed start yet so maybe have that button not display until u hit start
+})
+
+reveal.addEventListener('click', function(){
+  console.log(current_word);
+  window.alert('The word is ' + current_word);
 })
 
 
