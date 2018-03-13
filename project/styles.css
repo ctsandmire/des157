@@ -258,3 +258,10 @@ bottom: 0px;
 #the_form{
   padding-top: 10px;
 }
+
+/* LEARN APLHABET PAGE */
+#current_letter{
+  font-size: 40px;
+  font-weight: bold;
+  padding: 0px;
+}

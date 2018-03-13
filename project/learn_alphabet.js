@@ -18,10 +18,13 @@ next.addEventListener('click', function() {
   }
   letter++;
   sign.src = 'images/' + alphabet[letter] + '.svg';
-  return false;
+  console.log(alphabet[letter]);
+  current_letter.innerHTML = (alphabet[letter].toUpperCase());
 
+  return false;
 })
 
+console.log('outside log');
 current_letter.innerHTML = (alphabet[letter].toUpperCase());
 
 
@@ -32,6 +35,8 @@ prev.addEventListener('click', function() {
   }
   letter--;
   sign.src = 'images/' + alphabet[letter] + '.svg';
+  current_letter.innerHTML = (alphabet[letter].toUpperCase());
+
   return false;
 })
 
