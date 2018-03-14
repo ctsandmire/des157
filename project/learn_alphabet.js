@@ -9,7 +9,6 @@ var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
 //begin at "a"
 var letter = 0;
 
-var capture;
 
 // go to the next letter of the alphabet
 next.addEventListener('click', function() {
@@ -59,12 +58,21 @@ mySidenav.addEventListener('mouseleave', function(event){
 })
 
 
+var capture;
+
 
 function setup() {
   createCanvas(320, 240);
+  // createCanvas(windowWidth, windowHeight);
   capture = createCapture(VIDEO);
   capture.size(320, 240);
   capture.hide();
+
+  // var cnv = createCanvas(320, 240);
+  // var x = (windowWidth - width) / 2;
+  // var y = (windowHeight - height) / 2;
+  // cnv.position(x, y);
+  // background(255, 0, 200);
 }
 
 function draw() {
