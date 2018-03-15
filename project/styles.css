@@ -261,7 +261,6 @@ div#bottom_nav {
 
 #bottom_nav section:last-child p {
   float: right;
-  margin-left: px;
 }
 
 @keyframes bottom_nav_label {
