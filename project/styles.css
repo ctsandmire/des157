@@ -19,7 +19,8 @@ body {
 
 .main_content{
   padding-top: 27px;
-  padding-left: 300px;
+  margin: auto;
+  width: 760px;
 }
 
 #menu{
@@ -66,8 +67,26 @@ body {
   color: #ECE71F;
 }
 
+#current_page{
+  border: 1px solid;
+  border-radius: 0px;
+  padding: 3px 3px;
+  overflow: hidden;
+}
+
+
+.homepage_link {
+  display: inline-block;
+  /* padding: 30px 30px; */
+  padding: 40px 8px;
+  width: 165px;
+  text-align: center;
+}
+
+
+
 #logo {
-  padding-bottom: 100px;
+  padding-bottom: 60px;
 }
 
 #hand1 {
@@ -120,7 +139,8 @@ h1 {
 } */
 
 h3{
-  padding: 40px 0 15px 0;
+  padding: 40px 0 5px 0;
+  font-size: 15px;
 }
 
 a, #check_answer_button, #answer_input {
@@ -130,6 +150,9 @@ a, #check_answer_button, #answer_input {
   /* margin-bottom: 10px; */
   color: #3030F9;
   text-decoration: none;
+}
+
+.game_area button {
 }
 
 /* a:hover, #check_answer_button:hover, #answer_input:hover {

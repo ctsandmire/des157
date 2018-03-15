@@ -35,6 +35,8 @@ start.addEventListener('click', function() {
 function beginGame() {
   // add 1 to score count
   count++;
+
+
   //turn img display back on
   quizsign.style.display = 'inline';
   //generate a random number between 65 and 90
@@ -68,12 +70,29 @@ function beginGame() {
 //   if (count == 10) {}
   console.log("score = " + count);
   score.innerHTML = ("Score: " + count);
+
+  if (count == 5){
+    window.alert("Wow, five correct signs! keep up the good work!");
+  }
+
+  if (count == 10){
+    window.alert("Ten correct signs! Great Job!");
+  }
+
+  if (count == 20){
+    window.alert("Twenty correct signs! Keep it going!");
+  }
+
+
+
 }
 
 help.addEventListener('click', function(){
   console.log(alphabet[signshown]);
   window.alert('the letter is ' + alphabet[signshown].toUpperCase());
 })
+
+
 
 
 

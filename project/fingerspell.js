@@ -2,7 +2,7 @@
 
 var letterimg = document.getElementById('letterimg');
 var replay = document.getElementById('replay');
-var words = ["hungry", "family", "cat", "super", "sandwich"];
+var words = ["hungry", "family", "cat", "super", "sandwich", "house", "number", "envelope", "fridge", "marble"];
 var next = document.getElementById('next_word_button');
 var reveal = document.getElementById('reveal_answer_button');
 var the_form = document.getElementById('the_form');
@@ -171,10 +171,10 @@ mySidenav.addEventListener('mouseleave', function(event) {
 })
 
 //fun effect footer navs
-var left_button_footer = document.getElementById('left_button_footer');
-var prev_page = document.getElementById('prev_page');
-
-left_button_footer.addEventListener('mouseover', function(event) {
-  prev_page.style.opacity = '.5';
-  console.log('message recieved');
-})
+// var left_button_footer = document.getElementById('left_button_footer');
+// var prev_page = document.getElementById('prev_page');
+//
+// left_button_footer.addEventListener('mouseover', function(event) {
+//   prev_page.style.opacity = '.5';
+//   console.log('message recieved');
+// })
