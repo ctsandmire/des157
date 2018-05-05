@@ -29,34 +29,6 @@ body {
   color: #3030F9;
 }
 
-a, #check_answer_button, #answer_input {
-  padding: 10px 20px;
-  /* background: #bff7f3; */
-  border: 1px solid #3030F9;
-  border-radius: 22px;
-  /* margin-bottom: 10px; */
-  color: #3030F9;
-  text-decoration: none;
-}
-
-button {
-  background: #bff7f3;
-  border-radius: 22px;
-  color: #3030F9;
-  border: 1px solid #3030F9;
-  padding: 10px 20px;
-}
-
-button:hover {
-  color: #ECE71F;
-  border: 1px solid #ECE71F;
-  transition: 1s;
-}
-
-button:focus, #answer_input:focus, #check_answer_button:focus {
-  outline: 0;
-}
-
 div#logo {
   /* same as article */
   width: 60%;
@@ -70,7 +42,16 @@ h1 {
 h1#utter {
   animation-name: header_slide;
   animation-duration: 2s;
+  font-size: 50px;
+  margin-top: 25px;
+  font-weight: normal;
 }
+
+p{
+  font-size: 35px;
+  line-height: 50px;
+}
+
 
 
 
@@ -176,13 +157,77 @@ ul {
   list-style-type: none;
 }
 
-/* HOMEPAGE */
 
-.homepage_link:hover, #check_answer_button:hover {
-  background: #3030F9;
-  color: #bff7f3;
+
+
+
+
+
+
+/* BUTTONS AND LINKS */
+
+a, #check_answer_button, #answer_input {
+  padding: 10px 20px;
+  border: 1px solid #3030F9;
+  border-radius: 22px;
+  color: #3030F9;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button {
+  background: #bff7f3;
+  border-radius: 22px;
+  color: #3030F9;
+  border: 1px solid #3030F9;
+  padding: 10px 20px;
+}
+
+button:hover {
+  color: #ECE71F;
+  border: 1px solid #ECE71F;
   transition: 1s;
 }
+
+button:focus, #answer_input:focus, #check_answer_button:focus {
+  outline: 0;
+}
+
+.homepage_link{
+  /* padding: 10px 40px; */
+  /* padding-top: 20px; */
+  width: 19%;
+  display: inline-table;
+  height: 50px;
+  margin-right: 20px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 25px;
+  box-shadow: -5px 10px 24px #888888;
+  font-weight: bold;
+}
+
+#coming_soon_button:hover{
+  background: white;
+  color: grey;
+  border: 1px solid grey;
+}
+
+.homepage_link:hover, #check_answer_button:hover {
+  box-shadow: -3px 5px 12px #888888;
+  transition: .5s;
+  background: #ECE71F;
+  /* color: #bff7f3; */
+  border: 1px solid #3030F9;
+}
+
+
+
+
+
+
+
+/* HOMEPAGE */
 
 #hand1 {
   position: fixed;
@@ -198,26 +243,55 @@ ul {
   z-index: -1;
 }
 
+#welcome{
+  width: 60%;
+  margin: auto;
+}
 
+#home_article{
+  background: #3030F9;
+}
+
+#welcome p {
+  width: 70%;
+  /* padding-left: 40px; */
+}
+
+h2{
+  font-size: 75px;
+  font-weight: bold;
+  line-height: 110px;
+}
+
+h3{
+  font-size: 40px;
+}
 
 
 
 
 /* GENERAL GAME PAGE STYLES */
 
+h1{
+  font-size: 45px;
+}
+
 #middle_article {
   background: purple;
 }
 
 article {
-  background: orange;
+  /* background: orange; */
+  background: #ECE71F;
+  background: #BFF7F3;
   border-radius: 25px;
-  width: 60%;
+  width: 58%;
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
   /* padding: 10px 0; */
   box-shadow: -5px 10px 24px #888888;
+  padding: 5px 1%;
 }
 
 
@@ -228,19 +302,30 @@ article {
 /* NAVIGATION ARTICLE (THIRD/BOTTOM) */
 
 #bottom_nav{
-  background: #bff7f3;
+  margin-top: 45px;
+  /* background: #bff7f3; */
+  background: white;
+  box-shadow: none;
 }
 
 #bottom_nav section {
   background: white;
   padding: 10px;
   display: inline-block;
-  width: 44%;
+  width: 30%;
   border-radius: 25px;
+  border: 1px solid #3030F9;
+  box-shadow: -5px 10px 24px #888888;
+}
+
+#bottom_nav section:hover{
+  box-shadow: -3px 5px 12px #888888;
+    transition: .25s;
+    cursor: pointer;
 }
 
 #bottom_nav section:last-child {
-  margin-left: 5%;
+  margin-left: 33%;
   /* ^^ is there a better way to do this? I want the sections to take up the full width of the div but still have a gap */
 }
 
@@ -257,17 +342,19 @@ article {
 
 #bottom_nav a {
   border: none;
-  font-size: 25px;
+  font-size: 45px;
   margin: 0;
-  padding: 0;
+  padding: 5px 0 0 0;
 }
 
 #bottom_nav section:first-child a {
   float: right;
+  /* padding-right: 10px; */
 }
 
 #bottom_nav section:first-child h2 {
   text-align: right;
+  /* padding-right: 10px; */
 }
 
 #bottom_nav section:last-child p {
@@ -281,10 +368,13 @@ article {
 
 #bottom_nav h2 {
   font-size: 26px;
+  margin: 0;
+  line-height: 26px;
 }
 
 #bottom_nav p {
   font-size: 18px;
+  line-height: 18px;
 }
 
 
