@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Fingerspelling-It</title>
+  <title>Fingerspell-It</title>
   <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
   <!-- Fonts link below -->
   <link href="https://fonts.googleapis.com/css?family=Quicksand:700%7CRaleway" rel="stylesheet">
@@ -16,62 +16,63 @@
 </head>
 
 <body>
+  <!-- SIDE MENU ICON -->
   <div id="menu">
     <i class="fas fa-bars fa-2x"></i>
   </div>
-
+  <!-- SIDE MENU -->
   <div id="mySidenav" class="sidenav">
     <a href="index.html">Home</a>
     <!-- <a href="index.html">Why ASL?</a> -->
     <a href="contact.html">About</a>
-    <ul>
-      <li><a href="learn_alphabet.html">Learn the Alphabet</a></li>
-      <li><a href="keyboard_game.html">Name That Letter!</a></li>
-      <li><a href="fingerspell.html" id="current_page">Fingerspell-It</a></li>
-      <li><a href="interpret.html">An Interpretor's Shoes</a></li>
-    </ul>
+    <a href="learn_alphabet.html">Learn the Alphabet</a>
+    <a href="keyboard_game.html">Name That Letter!</a>
+    <a href="fingerspell.html">Fingerspell-It</a>
   </div>
 
-<section class="main_content">
+  <!-- MAIN PAGE CONTENT -->
+  <div id="logo">
+    <!-- <img src="images/utter_logo.svg" width="18" alt="utter logo showing illustration of the sign for the letter u"/> -->
+    <h1 id="utter">utter</h1>
+  </div>
+
+  <article>
     <h1>Fingerspell-It</h1>
-  <!-- <a href="index.html" id="home">Home</a> -->
+    <!-- <a href="index.html" id="home">Home</a> -->
 
-  <p>
-    Watch the series of signs appear on the screen.  When you know what word is being spelled, check your answer to see if you're correct.  Then, click 'next word'.
-  </p>
-  <p id="start_statement">
-    Click start to begin!
-  </p>
-  <button id="start">Start</button>
-  <br />
-  <button id="reveal_answer_button">Reveal Answer</button>
-  <button id="next_word_button">Next word</button>
-  <br />
+    <p>
+      Watch the series of signs appear on the screen. When you know what word is being spelled, check your answer to see if you're correct. Then, click 'next word'.
+    </p>
+    <p id="start_statement">
+      Click start to begin!
+    </p>
+    <button id="start">Start</button>
+    <!-- <br /> -->
+    <button id="reveal_answer_button">Reveal Answer</button>
+    <button id="next_word_button">Next word</button>
+    <!-- <br /> -->
 
-  <div id="reveal_answer_div" style="display: none;"></div>
+    <div id="reveal_answer_div" style="display: none;"></div>
 
-  <form name="f" id="the_form">
-    <label for="answer_input">answer:</label>
-    <input type="text" name="answer_input" id="answer_input" />
-    <!-- <button id="check_answer_button">Check</button> -->
-    <input type="submit" name="check_answer_button" value="Check" id="check_answer_button">
-  </form>
+    <div id="spelling_area">
+      <!-- set source to a transparent pixel -->
+      <img id="letterimg" src="images/a.svg" alt="current letter" />
+      <img id="replay" src="images/replay.svg" alt="click to replay" />
+    </div>
 
+  </article>
 
+  <article>
+    <form name="f" id="the_form">
+      <label for="answer_input">answer:</label>
+      <input type="text" name="answer_input" id="answer_input" />
+      <!-- <button id="check_answer_button">Check</button> -->
+      <input type="submit" name="check_answer_button" value="Check" id="check_answer_button">
+    </form>
+  </article>
 
-
-
-  <div id="spelling_area">
-    <!-- set source to a transparent pixel -->
-    <img id="letterimg" src="images/a.svg" alt="current letter" />
-    <img id="replay" src="images/replay.svg" alt="click to replay" />
-  </div>
-
-</section>
-
-
-  <footer>
-    <div id="bottom_nav">
+  <article id="bottom_nav">
+    <div>
       <section>
         <h2>Need to review?</h2>
         <p>Previous game</p>
@@ -84,7 +85,9 @@
         <p>Next game</p>
       </section>
     </div>
+  </article>
 
+  <footer>
     <nav id="valid">
       <ul>
         <li><a href="https://validator.w3.org/check?uri=referer"><i class="fab fa-html5" aria-hidden="true"></i></a></li>

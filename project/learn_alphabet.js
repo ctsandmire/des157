@@ -44,25 +44,30 @@ prev.addEventListener('click', function() {
 var menu = document.getElementById('menu');
 
 menu.addEventListener('mouseenter', function(event){
-  mySidenav.style.width = '150px';
+  //mySidenav.style.width = '250px';
   mySidenav.style.left = '40px';
+  mySidenav.style.opacity = '1';
   // menu.style.color = '#ECE71F';
   console.log("mouseover");
 })
 
 mySidenav.addEventListener('mouseleave', function(event){
-  mySidenav.style.width = '0px';
-  mySidenav.style.left = '-100px';
+  //mySidenav.style.width = '275px';
+  mySidenav.style.left = '-250px';
+  mySidenav.style.opacity = '0';
   // menu.style.color = '#3030F9';
   console.log("mouseover");
 })
+
 
 
 var capture;
 
 
 function setup() {
-  createCanvas(320, 240);
+  var myCanvas = createCanvas(320, 240);
+  myCanvas.parent('mySketch');
+
   // createCanvas(windowWidth, windowHeight);
   capture = createCapture(VIDEO);
   capture.size(320, 240);

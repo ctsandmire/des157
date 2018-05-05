@@ -16,29 +16,31 @@
 </head>
 
 <body>
-
+  <!-- SIDE MENU ICON -->
   <div id="menu">
     <i class="fas fa-bars fa-2x"></i>
   </div>
-
+  <!-- SIDE MENU -->
   <div id="mySidenav" class="sidenav">
     <a href="index.html">Home</a>
     <!-- <a href="index.html">Why ASL?</a> -->
     <a href="contact.html">About</a>
-    <ul>
-      <li><a href="learn_alphabet.html">Learn the Alphabet</a></li>
-      <li><a href="keyboard_game.html" id="current_page">Name That Letter!</a></li>
-      <li><a href="fingerspell.html">Fingerspell-It</a></li>
-      <li><a href="interpret.html">An Interpretor's Shoes</a></li>
-    </ul>
+    <a href="learn_alphabet.html">Learn the Alphabet</a>
+    <a href="keyboard_game.html">Name That Letter!</a>
+    <a href="fingerspell.html">Fingerspell-It</a>
   </div>
 
-  <section class="main_content">
+  <div id="logo">
+    <!-- <img src="images/utter_logo.svg" width="18" alt="utter logo showing illustration of the sign for the letter u"/> -->
+    <h1 id="utter">utter</h1>
+  </div>
+
+  <article>
     <h1>Name That Letter!</h1>
     <!-- <a href="index.html" id="home">Home</a> -->
 
     <p id="instructions">
-      Time to test your recognition of letter signs! When a sign appears on screen, type the letter on your keyboard that corresponds with it. If you get stuck stuck, click the 'hint' button.  Keep going until you feel comfortable moving on to the next game.
+      Time to test your recognition of letter signs! When a sign appears on screen, type the letter on your keyboard that corresponds with it. If you get stuck stuck, click the 'hint' button. Keep going until you feel comfortable moving on to the next game.
     </p>
     <p id="start_statement">
       Click start to begin!
@@ -55,11 +57,14 @@
     <div id="showsigns">
       <img id="quizsign" src="images/a.svg" alt="sign for letter a" height="200" />
     </div>
-  </section>
+  </article>
 
+  <article>
+    <p>You Typed:</p>
+  </article>
 
-  <footer>
-    <div id="bottom_nav">
+  <article id="bottom_nav">
+    <div>
       <section>
         <h2>Need to review?</h2>
         <p>Previous game</p>
@@ -72,7 +77,10 @@
         <p>Next game</p>
       </section>
     </div>
+  </article>
 
+
+  <footer>
     <nav id="valid">
       <ul>
         <li><a href="https://validator.w3.org/check?uri=referer"><i class="fab fa-html5" aria-hidden="true"></i></a></li>

@@ -1,9 +1,9 @@
 <!doctype html>
-<html id="fingerspell_page">
+<html>
 
 <head>
   <meta charset="utf-8" />
-  <title>Interpretor Game</title>
+  <title>Test Layout</title>
   <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
   <!-- Fonts link below -->
   <link href="https://fonts.googleapis.com/css?family=Quicksand:700%7CRaleway" rel="stylesheet">
@@ -16,42 +16,77 @@
 </head>
 
 <body>
+  <!-- SIDE MENU ICON -->
   <div id="menu">
     <i class="fas fa-bars fa-2x"></i>
   </div>
-
+  <!-- SIDE MENU -->
   <div id="mySidenav" class="sidenav">
     <a href="index.html">Home</a>
     <!-- <a href="index.html">Why ASL?</a> -->
     <a href="contact.html">About</a>
     <ul>
       <li><a href="learn_alphabet.html">Learn the Alphabet</a></li>
-      <li><a href="keyboard_game.html">Name That Letter!</a></li>
+      <li><a href="keyboard_game.html" id="current_page">Name That Letter!</a></li>
       <li><a href="fingerspell.html">Fingerspell-It</a></li>
-      <li><a href="interpret.html" id="current_page">An Interpretor's Shoes</a></li>
     </ul>
   </div>
 
-  <section class="main_content">
-    <h1>An Interpretor's Shoes</h1>
-    <p>
-      Oops! This game is currently under construction, sorry!
+  <!-- MAIN PAGE CONTENT -->
+  <div id="logo">
+    <!-- <img src="images/utter_logo.svg" width="18" alt="utter logo showing illustration of the sign for the letter u"/> -->
+    <h1 id="utter">utter</h1>
+  </div>
+
+  <article>
+    <h1>Test Layout</h1>
+    <p id="instructions">
+      These are instructions for how to play the game! Go play it now.
     </p>
-  </section>
+    <p id="start_statement">
+      Click start to begin!
+    </p>
+
+    <button id="start">Start</button>
+
+    <button id="help">Hint</button>
+
+    <div>
+      <p id="score"></p>
+    </div>
+
+    <div id="showsigns">
+      <img id="quizsign" src="images/a.svg" alt="sign for letter a" height="200" />
+    </div>
+    </section>
+
+  </article>
+
+  <article>
+    <p>
+      HAAAAAAAYYYYYYY!
+    </p>
+  </article>
+
+  <article id="bottom_nav">
+    <div>
+      <section>
+        <h2>Need to review?</h2>
+        <p>Previous game</p>
+        <a href="learn_alphabet.html"><i class="fas fa-arrow-circle-left"></i></a>
+      </section>
+
+      <section>
+        <h2>Got the hang of it?</h2>
+        <a href="fingerspell.html"><i class="fas fa-arrow-circle-right"></i></a>
+        <p>Next game</p>
+      </section>
+    </div>
+  </article>
+
 
 
   <footer>
-    <div id="bottom_nav">
-      <section>
-        <h2>Need to review?</h2>
-        <p id="prev_page">Previous game</p>
-        <a href="fingerspell.html"><i class="fas fa-arrow-circle-left"></i></a>
-      </section>
-
-      <section>
-      </section>
-    </div>
-
     <nav id="valid">
       <ul>
         <li><a href="https://validator.w3.org/check?uri=referer"><i class="fab fa-html5" aria-hidden="true"></i></a></li>
@@ -61,7 +96,7 @@
     </nav>
   </footer>
 
-  <script src="interpret.js"></script>
+  <script src="keyboard_game.js"></script>
 
 </body>
 

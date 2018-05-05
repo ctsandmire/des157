@@ -21,7 +21,8 @@ letterimg.style.display = 'none';
 replay.style.display = 'none';
 next.style.display = 'none';
 reveal.style.display = 'none';
-the_form.style.display = 'none';
+// the_form.style.display = 'none';
+ the_form.style.display = 'block';
 
 
 //begin game
@@ -31,7 +32,7 @@ start.addEventListener('click', function() {
   start.style.display = 'none';
   next.style.display = 'inline';
   reveal.style.display = 'inline';
-  the_form.style.display = 'block';
+//  the_form.style.display = 'block';
   start_statement.style.display = 'none';
   //show each sign in the array for a quick sec...then change to re-display image that is clickable but thats further down the road
   //accept correct string of letters in the input field as the correct answer
@@ -156,19 +157,22 @@ reveal.addEventListener('click', function(){
 // menu duplicate
 var menu = document.getElementById('menu');
 
-menu.addEventListener('mouseenter', function(event) {
-  mySidenav.style.width = '150px';
+menu.addEventListener('mouseenter', function(event){
+  //mySidenav.style.width = '250px';
   mySidenav.style.left = '40px';
+  mySidenav.style.opacity = '1';
   // menu.style.color = '#ECE71F';
-  // console.log("mouseover");
+  console.log("mouseover");
 })
 
-mySidenav.addEventListener('mouseleave', function(event) {
-  mySidenav.style.width = '0px';
-  mySidenav.style.left = '-100px';
+mySidenav.addEventListener('mouseleave', function(event){
+  //mySidenav.style.width = '275px';
+  mySidenav.style.left = '-250px';
+  mySidenav.style.opacity = '0';
   // menu.style.color = '#3030F9';
-  // console.log("mouseover");
+  console.log("mouseover");
 })
+
 
 //fun effect footer navs
 // var left_button_footer = document.getElementById('left_button_footer');

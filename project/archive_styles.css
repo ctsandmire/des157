@@ -1,0 +1,319 @@
+/* BACKGROUND STYLES */
+
+/* html, #fingerspell_page {
+  background: url(images/bg.svg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+article {
+  background: orange;
+  margin-bottom: 10px;
+  width: 70%;
+  margin: auto;
+}
+
+body {
+  /* text-align: center; */
+  font-family: 'Raleway', sans-serif;
+  background-color: #bff7f3;
+  /* background-color: #ECE71F; */
+  /* background-color: #fff; */
+  color: #3030F9;
+}
+
+.main_content {
+  padding-top: 27px;
+  margin: auto;
+  width: 760px;
+}
+
+#menu {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  cursor: pointer;
+  color: #3030F9;
+}
+
+.sidenav {
+  height: 70%;
+  width: 0px;
+  position: fixed;
+  top: 0;
+  left: -100px;
+  /* z-index: 1; */
+  overflow-x: hidden;
+  transition: 1s;
+  padding-top: 100px;
+}
+
+.sidenav a {
+  padding: 10px 0 10px 0px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #3030F9;
+  display: block;
+  transition: 0.3s;
+  border: none;
+}
+
+.sidenav ul li a {
+  font-size: 12px;
+  display: block;
+}
+
+.sidenav ul {
+  width: 100px;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.sidenav a:hover {
+  color: #ECE71F;
+}
+
+#current_page {
+  border: 1px solid;
+  border-radius: 0px;
+  padding: 3px 3px;
+  overflow: hidden;
+}
+
+.homepage_link {
+  display: inline-block;
+  /* padding: 30px 30px; */
+  padding: 40px 8px;
+  width: 165px;
+  text-align: center;
+}
+
+
+
+/* UNSURE WHAT THESE ARE vv  */
+
+#logo {
+  padding-bottom: 60px;
+}
+
+#utter {
+  display: inline;
+  font-size: 50px;
+  font-family: 'Quicksand', sans-serif;
+  /* padding-left: 20px; */
+}
+
+/* UNSURE WHAT THESE ARE ^^  */
+
+
+
+
+#hand1 {
+  position: fixed;
+  bottom: -60px;
+  left: -50px;
+  z-index: -1;
+}
+
+#hand2 {
+  position: fixed;
+  top: -60px;
+  right: -50px;
+  z-index: -1;
+}
+
+
+
+/* #menu p {
+  display: inline;
+} */
+
+#letterimg {
+  height: 250px;
+  margin: auto;
+}
+
+#replay {
+  height: 150px;
+  position: absolute;
+  top: 300px;
+  cursor: pointer;
+}
+
+h1 {
+  font-weight: bold;
+  animation-name: header_slide;
+  animation-duration: 2s;
+}
+
+/* #bottom_nav p{
+  animation-name: bottom_nav_slide;
+  animation-duration: 2s;
+} */
+
+h3 {
+  padding: 40px 0 5px 0;
+  font-size: 15px;
+}
+
+a, #check_answer_button, #answer_input {
+  padding: 10px 20px;
+  background: #bff7f3;
+  border: 1px solid #3030F9;
+  border-radius: 22px;
+  /* margin-bottom: 10px; */
+  color: #3030F9;
+  text-decoration: none;
+}
+
+.homepage_link:hover, #check_answer_button:hover {
+  background: #3030F9;
+  color: #bff7f3;
+  transition: 1s;
+}
+
+
+button {
+  background: #bff7f3;
+  border-radius: 22px;
+  color: #3030F9;
+  border: 1px solid #3030F9;
+  padding: 10px 20px;
+}
+
+button:hover {
+  color: #ECE71F;
+  border: 1px solid #ECE71F;
+  transition: 1s;
+}
+
+button:focus, #answer_input:focus, #check_answer_button:focus {
+  outline:0;
+}
+
+
+/* KEYFRAMES */
+
+@keyframes header_slide {
+  from {
+    padding-left: 80px;
+  }
+  to {
+    padding-left: 0px;
+  }
+}
+
+/* FOOTER VALIDATION LINKS */
+
+footer {
+  /* background: red; */
+  position: fixed;
+  bottom: 0px;
+  /* left: 0px; */
+  width: 100%;
+}
+
+#valid ul {
+  position: fixed;
+  right: 10px;
+  bottom: 0px;
+}
+
+#valid ul li {
+  float: right;
+  padding: 5px;
+}
+
+#valid ul li a {
+  border: none;
+  padding: 10px 5px;
+  border-radius: 0;
+  font-size: 20px;
+  color: white;
+}
+
+#valid ul li a:hover {
+  color: #3030F9;
+  transition: 1s;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* FOOTER BOTTOM NAV */
+
+div#bottom_nav {
+  position: fixed;
+  left: 55%;
+  bottom: 0px;
+}
+
+#bottom_nav section {
+  margin: 15px;
+  width: 140px;
+  padding-left: 0px;
+  float: left;
+}
+
+#bottom_nav p, #bottom_nav a {
+  float: left;
+}
+
+#bottom_nav a {
+  border: none;
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+#bottom_nav section:first-child a {
+  float: right;
+}
+
+#bottom_nav section:first-child h2 {
+  text-align: right;
+}
+
+#bottom_nav section:last-child p {
+  float: right;
+}
+
+@keyframes bottom_nav_label {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#bottom_nav a:hover {
+  color: white;
+  transition: 1s;
+}
+
+#bottom_nav h2 {
+  font-size: 16px;
+}
+
+#bottom_nav p {
+  font-size: 12px;
+}
+
+
+/* FINGERSPELLING PAGE */
+
+#the_form {
+  padding-top: 10px;
+}
+
+/* LEARN APLHABET PAGE */
+
+#current_letter {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 0px;
+}
