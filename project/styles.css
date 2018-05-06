@@ -29,6 +29,10 @@ body {
   color: #3030F9;
 }
 
+em{
+  font-weight: bold;
+}
+
 div#logo {
   /* same as article */
   width: 60%;
@@ -45,6 +49,11 @@ h1#utter {
   font-size: 50px;
   margin-top: 25px;
   font-weight: normal;
+}
+
+#utter a{
+  border: none;
+  padding: 0;
 }
 
 p{
@@ -176,7 +185,7 @@ a, #check_answer_button, #answer_input {
 }
 
 button {
-  background: #bff7f3;
+  /* background: #bff7f3; */
   border-radius: 22px;
   color: #3030F9;
   border: 1px solid #3030F9;
@@ -221,6 +230,10 @@ button:focus, #answer_input:focus, #check_answer_button:focus {
   border: 1px solid #3030F9;
 }
 
+#start{
+  background: #3030F9;
+  color: white;
+}
 
 
 
@@ -248,10 +261,6 @@ button:focus, #answer_input:focus, #check_answer_button:focus {
   margin: auto;
 }
 
-#home_article{
-  background: #3030F9;
-}
-
 #welcome p {
   width: 70%;
   /* padding-left: 40px; */
@@ -270,20 +279,31 @@ h3{
 
 
 
+
+
 /* GENERAL GAME PAGE STYLES */
 
 h1{
   font-size: 45px;
 }
 
+#game_p{
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
 #middle_article {
-  background: purple;
+  /* background: #fdd031; */
+  /* background: white; */
+  background: #BFF7F3;
+  height: 130px;
 }
 
 article {
   /* background: orange; */
-  background: #ECE71F;
-  background: #BFF7F3;
+  /* background: #ECE71F; */
+  /* background: #BFF7F3; */
+  background: white;
   border-radius: 25px;
   width: 58%;
   margin-bottom: 20px;
@@ -294,7 +314,11 @@ article {
   padding: 5px 1%;
 }
 
-
+#showsigns{
+  /* background: black; */
+  width: 200px;
+  display: inline-block;
+}
 
 
 
@@ -302,7 +326,7 @@ article {
 /* NAVIGATION ARTICLE (THIRD/BOTTOM) */
 
 #bottom_nav{
-  margin-top: 45px;
+  margin-top: 20px;
   /* background: #bff7f3; */
   background: white;
   box-shadow: none;
@@ -384,31 +408,106 @@ article {
 
 /*** 1. LEARN ALPHABET ***/
 
-#current_letter {
-  font-size: 40px;
-  font-weight: bold;
-  padding: 0px;
+.game_area{
+  background: white;
+  border: 1px solid #bff7f3;
+  width: 40%;
+  margin: auto;
+  border-radius: 25px;
+  margin-bottom: 15px;
 }
 
-canvas#defaultCanvas0 {
-  margin-left: auto;
-  margin-right: auto;
+.game_area div {
+  vertical-align: middle;
+}
+
+.game_area div#support_content {
+  margin-left: 25px;
+}
+
+.game_area div#showsigns{
+  float: right;
+  /* margin-right: 25px; */
+}
+
+#current_letter {
+  font-size: 180px;
+  font-weight: bold;
+  padding: 10px;
+  margin: 0;
+  line-height: 180px;
+  color: #fdd031;
 }
 
 #mySketch {
-  margin-left: 40%;
-  /* ^^ unsure how to get this in the precise center */
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
+#support_content{
+  /* background: black; */
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+}
+
+#next_prev_buttons {
+  /* background: black; */
+  width: 110px;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+#next_prev_buttons button{
+
+}
+
+#name_that_letter{
+  height: 430px;
+}
+
 /*** 2. NAME THAT LETTER ***/
+
+#score{
+  /* background: black; */
+  width: 200px;
+}
+
+#help{
+  /* background: black; */
+  width: 200px;
+}
 
 /*** 3. FINGERSPELL IT ***/
 
+#fingerspell_it{
+  height: 470px;
+}
+
+.fingerspell_game_area{
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
+.fingerspell_game_area div{
+  float: left;
+}
+
+#spelling_area{
+  width: 70%;
+  /* background: green; */
+}
+
+/* #spelling_area img {
+  display: inline-block;
+} */
+
 #letterimg {
   height: 250px;
-  margin: auto;
+  /* margin: auto; */
 }
 
 #replay {
@@ -418,9 +517,36 @@ canvas#defaultCanvas0 {
   cursor: pointer;
 }
 
+img#letterimg, img#replay {
+  /* display: inline-block; */
+  float: left;
+}
+
 #the_form {
   margin-top: 10px;
 }
+
+
+
+
+
+
+/* ABOUT PAGE */
+
+p.about {
+  font-size: 25px;
+}
+
+#email{
+  padding: 0;
+  border: none;
+  color: #3030F9;
+  text-decoration: none;
+  /* display: inline-block; */
+}
+
+
+
 
 
 

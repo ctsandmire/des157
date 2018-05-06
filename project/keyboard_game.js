@@ -13,6 +13,7 @@ var help = document.getElementById('help');
 var score = document.getElementById("score");
 var count = -1;
 var signshown;
+//var you_typed = document.getElementById('you_typed');
 
 //dont display img before game has begun
 quizsign.style.display = 'none';
@@ -49,16 +50,29 @@ function beginGame() {
 
   document.addEventListener("keydown", function(event) {
     console.log("key pressed = " + event.which);
+
+    //innerHTML saying, you typed this!
+    //convert 60-90 whatever to 0-25 by subrtacting
+    //then use alphabet array
+    var user_key_pressed = alphabet[event.which - 65];
+    document.getElementById("you_typed").innerHTML = "You Typed: <em>" + user_key_pressed + "</em>";
+    // store correct answer
+    var correct_answer = alphabet[signshown];
+
     //if key pressed corresponds with sign shown, show a new one
     if (event.which === randomsign) {
       //display another sign
       beginGame();
       //reset random sign so it doesnt accept every previous letter shown as a correct answer
       randomsign = 0;
+      //you typed x. That's correct!
+      document.getElementById("you_typed").innerHTML = "You Typed: <em>" + user_key_pressed + "</em>   That's correct!";
+
     } else if (event.which < 65 || event.which > 90) {
       //non-letter key pressed, nothing happens
       console.log("count stays the same");
       count = count;
+      document.getElementById("you_typed").innerHTML = "Guess a letter in the alphabet.";
     }
     // else {
     //   //ISSUE, not working; score becomes negative no matter what then starts going down exponentially?

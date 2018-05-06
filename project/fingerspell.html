@@ -33,36 +33,41 @@
   <!-- MAIN PAGE CONTENT -->
   <div id="logo">
     <!-- <img src="images/utter_logo.svg" width="18" alt="utter logo showing illustration of the sign for the letter u"/> -->
-    <h1 id="utter">utter</h1>
+    <h1 id="utter"><a href="index.html">utter</a></h1>
   </div>
 
-  <article>
+  <article id="fingerspell_it">
     <h1>Fingerspell-It</h1>
     <!-- <a href="index.html" id="home">Home</a> -->
 
     <p>
-      Watch the series of signs appear on the screen. When you know what word is being spelled, check your answer to see if you're correct. Then, click 'next word'.
+      Guess what word is being fingerspelled.
     </p>
     <p id="start_statement">
       Click start to begin!
     </p>
     <button id="start">Start</button>
     <!-- <br /> -->
-    <button id="reveal_answer_button">Reveal Answer</button>
-    <button id="next_word_button">Next word</button>
-    <!-- <br /> -->
+    <section class="fingerspell_game_area">
+      <div id="support_content">
 
-    <div id="reveal_answer_div" style="display: none;"></div>
 
-    <div id="spelling_area">
-      <!-- set source to a transparent pixel -->
-      <img id="letterimg" src="images/a.svg" alt="current letter" />
-      <img id="replay" src="images/replay.svg" alt="click to replay" />
-    </div>
+        <button id="reveal_answer_button">Reveal Answer</button>
+        <button id="next_word_button">Next word</button>
+        <!-- <br /> -->
+
+        <div id="reveal_answer_div" style="display: none;"></div>
+      </div>
+      <div id="spelling_area">
+        <!-- set source to a transparent pixel -->
+        <img id="letterimg" src="images/a.svg" alt="current letter" />
+        <img id="replay" src="images/replay.svg" alt="click to replay" />
+      </div>
+    </section>
 
   </article>
 
-  <article>
+  <article id="middle_article">
     <form name="f" id="the_form">
       <label for="answer_input">answer:</label>
       <input type="text" name="answer_input" id="answer_input" />
@@ -80,9 +85,6 @@
       </section>
 
       <section>
-        <h2>Got the hang of it?</h2>
-        <a href="interpret.html"><i class="fas fa-arrow-circle-right"></i></a>
-        <p>Next game</p>
       </section>
     </div>
   </article>

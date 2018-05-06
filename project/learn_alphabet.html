@@ -33,26 +33,28 @@
   <!-- MAIN PAGE CONTENT -->
   <div id="logo">
     <!-- <img src="images/utter_logo.svg" width="18" alt="utter logo showing illustration of the sign for the letter u"/> -->
-    <h1 id="utter">utter</h1>
+    <h1 id="utter"><a href="index.html">utter</a></h1>
   </div>
 
   <article>
     <h1>Learn the Alphabet</h1>
-    <!-- <a href="index.html" id="home">Home</a> -->
-
-    <p>
-      Click to shuffle through the signs for each letter in the alphabet. Use your webcam to practice making each sign. When you think you've got it, move on to the next game and start testing your knowledge!
-    </p>
+    <p id="game_p">Use your webcam to familiarize yourself with the ASL alphabet.</p>
 
     <section class="game_area">
-      <button id="prev">&lt;</button>
-      <button id="next">></button>
-      <p id="current_letter"></p>
+      <div id="support_content">
+        <p id="current_letter"></p>
+      </div>
+
       <div id="showsigns">
         <img id="sign" src="images/a.svg" alt="sign for letter" height="200" />
       </div>
-
     </section>
+
+    <div id="next_prev_buttons">
+      <button id="prev">&lt;</button>
+      <button id="next">></button>
+    </div>
+
   </article>
 
   <article id="middle_article">

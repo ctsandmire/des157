@@ -32,15 +32,15 @@
 
   <div id="logo">
     <!-- <img src="images/utter_logo.svg" width="18" alt="utter logo showing illustration of the sign for the letter u"/> -->
-    <h1 id="utter">utter</h1>
+    <h1 id="utter"><a href="index.html">utter</a></h1>
   </div>
 
-  <article>
+  <article id="name_that_letter">
     <h1>Name That Letter!</h1>
     <!-- <a href="index.html" id="home">Home</a> -->
 
     <p id="instructions">
-      Time to test your recognition of letter signs! When a sign appears on screen, type the letter on your keyboard that corresponds with it. If you get stuck stuck, click the 'hint' button. Keep going until you feel comfortable moving on to the next game.
+      Type the letter on your keyboard that corresponds with each sign.
     </p>
     <p id="start_statement">
       Click start to begin!
@@ -48,19 +48,27 @@
 
     <button id="start">Start</button>
 
-    <button id="help">Hint</button>
+    <section class="game_area">
 
-    <div>
-      <p id="score"></p>
-    </div>
+      <div id="support_content">
+        <p id="score"></p>
+        <button id="help">Hint</button>
+      </div>
+      <div id="showsigns">
+        <img id="quizsign" src="images/a.svg" alt="sign for letter a" height="200" />
+      </div>
+    </section>
 
-    <div id="showsigns">
-      <img id="quizsign" src="images/a.svg" alt="sign for letter a" height="200" />
-    </div>
+
   </article>
 
-  <article>
-    <p>You Typed:</p>
+
+
+
+
+
+  <article id="middle_article">
+    <p id="you_typed"></p>
   </article>
 
   <article id="bottom_nav">
