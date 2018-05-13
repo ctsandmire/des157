@@ -14,10 +14,13 @@ var score = document.getElementById("score");
 var count = -1;
 var signshown;
 //var you_typed = document.getElementById('you_typed');
+//var game_area = document.getElementsByClassName('game_area');
+var disp = document.getElementById('disp');
 
 //dont display img before game has begun
 quizsign.style.display = 'none';
 help.style.display = 'none'
+disp.style.display = 'none';
 
 //display instructions
 
@@ -29,6 +32,8 @@ start.addEventListener('click', function() {
   start.style.display = 'none';
   start_statement.style.display = 'none';
   help.style.display = 'block'
+  disp.style.display = 'block';
+
   beginGame();
 })
 
@@ -55,7 +60,7 @@ function beginGame() {
     //convert 60-90 whatever to 0-25 by subrtacting
     //then use alphabet array
     var user_key_pressed = alphabet[event.which - 65];
-    document.getElementById("you_typed").innerHTML = "You Typed: <em>" + user_key_pressed + "</em>";
+    document.getElementById("you_typed").innerHTML = "You Typed: <br /><em>" + user_key_pressed + "</em><br />Try again!";
     // store correct answer
     var correct_answer = alphabet[signshown];
 
@@ -66,7 +71,7 @@ function beginGame() {
       //reset random sign so it doesnt accept every previous letter shown as a correct answer
       randomsign = 0;
       //you typed x. That's correct!
-      document.getElementById("you_typed").innerHTML = "You Typed: <em>" + user_key_pressed + "</em>   That's correct!";
+      document.getElementById("you_typed").innerHTML = "You Typed: <br /><em>" + user_key_pressed + "</em><br />That's correct!";
 
     } else if (event.which < 65 || event.which > 90) {
       //non-letter key pressed, nothing happens

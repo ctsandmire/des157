@@ -48,7 +48,7 @@
 
     <button id="start">Start</button>
 
-    <section class="game_area">
+    <section class="game_area" id="disp">
 
       <div id="support_content">
         <p id="score"></p>
@@ -68,20 +68,24 @@
 
 
   <article id="middle_article">
-    <p id="you_typed"></p>
+    <div id="center_all">
+      <p id="you_typed"></p>
+    </div>
   </article>
 
   <article id="bottom_nav">
     <div>
-      <section>
+      <section id="positioner">
+        <a id="invisible_anchor" href="learn_alphabet.html"></a>
         <h2>Need to review?</h2>
         <p>Previous game</p>
-        <a href="learn_alphabet.html"><i class="fas fa-arrow-circle-left"></i></a>
+        <a><i class="fas fa-arrow-circle-left"></i></a>
       </section>
 
-      <section>
+      <section id="positioner">
+        <a id="invisible_anchor" href="fingerspell.html"></a>
         <h2>Got the hang of it?</h2>
-        <a href="fingerspell.html"><i class="fas fa-arrow-circle-right"></i></a>
+        <a ><i class="fas fa-arrow-circle-right"></i></a>
         <p>Next game</p>
       </section>
     </div>
