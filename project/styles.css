@@ -139,9 +139,9 @@ footer {
   width: 100%;
 }
 
-#valid{
+/* #valid{
   display: none;
-}
+} */
 
 #valid ul {
   position: fixed;
