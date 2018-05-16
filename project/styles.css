@@ -139,6 +139,10 @@ footer {
   width: 100%;
 }
 
+#valid{
+  display: none;
+}
+
 #valid ul {
   position: fixed;
   right: 10px;
@@ -515,7 +519,9 @@ section#invisible{
   cursor: pointer;
 }
 
-
+#you_typed{
+  /* text-transform: uppercase; */
+}
 
 
 

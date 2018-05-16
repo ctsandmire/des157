@@ -71,7 +71,7 @@ function beginGame() {
       //reset random sign so it doesnt accept every previous letter shown as a correct answer
       randomsign = 0;
       //you typed x. That's correct!
-      document.getElementById("you_typed").innerHTML = "You Typed: <br /><em>" + user_key_pressed + "</em><br />That's correct!";
+      document.getElementById("you_typed").innerHTML = "You Typed: <br /><em>" + user_key_pressed + "</em><br /><em>CORRECT!</em>";
 
     } else if (event.which < 65 || event.which > 90) {
       //non-letter key pressed, nothing happens
